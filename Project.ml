@@ -29,4 +29,13 @@ let () =
   | None -> Printf.printf "La liste est vide.\n"
 
 (* Fonction pour convertir un entier naturel en une liste de bits en base 2 *)
-let decomposition (x : int64) : bool list =
+let rec decomposition (x : int64) : bool list =
+  if x = 0L then
+    [false]
+  else
+    let quotient = Int64.div x 2L in
+    let reste = Int64.rem x 2L in
+    let bits_de_poids_faible = if reste = 1L then [true] else [false] in
+    bits_de_poids_faible @ decomposition quotient
+
+
