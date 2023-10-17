@@ -39,3 +39,21 @@ let rec decomposition (x : int64) : bool list =
     bits_de_poids_faible @ decomposition quotient
 
 
+let rec completion(lst : bool list, x : int64) : bool list = 
+  if x <= 0 then 
+    []
+  else
+    match lst with 
+    | [] -> [false] :: completion([], x-1)
+    | h :: t -> h :: completion(t, x-1)
+
+let composition (bits : bool list) : int64 =
+  let rec aux bits result =
+    match bits with
+    | [] -> result
+    | bit :: rest ->
+      let result' = Int64.mul result 2L in
+      let result'' = if bit then Int64.add result' 1L else result' in
+      aux rest result''
+  in
+  aux bits 0L
