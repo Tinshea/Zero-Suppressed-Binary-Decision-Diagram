@@ -1,3 +1,5 @@
+(*partie 1*)
+
 (* Définition d'une structure de liste pour représenter un entier 64 bits *)
 type entier_64_bits = int64 list
 
@@ -46,8 +48,9 @@ let rec completion lst n  =
     | h :: t -> h :: completion t (n - 1)
 
 
-
+(* Fonction pour convertir une liste de bits en base 2 en un entier naturel*) 
 let composition bool_list =
+   (* Ici nous utilisons la méhtode des divisions successives en la remontant*) 
   let rec bits_to_int64 acc bool_list =
     match bool_list with
     | [] -> 0
@@ -79,6 +82,46 @@ let () =
   let alea_entier = gen_alea n in
   Printf.printf "Grand entier aléatoire de %d bits : %Ld\n" n alea_entier
 
+    
+(*partie 2*)
 
+(* Fonction auxiliaire pour calculer le logarithme en base 2 *)
+let log2 x =
+  int_of_float (log (float_of_int x) /. log 2.)
     
-    
+let couper_liste_en_deux lst =
+  let l = List.length lst / 2 in
+  let rec aux acc1 acc2 acc3 liste =
+    match liste with
+    | [] -> (List.rev acc1, List.rev acc2)
+    | _ when acc3 = l -> (List.rev acc1, (acc2 @ liste))
+    | h :: t -> aux (h :: acc1) acc2 (acc3 + 1) t
+  in
+  aux [] [] 0 lst
+;; 
+
+(* Définition d'une structure de données pour un arbre binaire de décision *)
+type 'a arbre_decision =
+  | Leaf of 'a  (* Feuille de l'arbre contenant une valeur *)
+  | Node of int * 'a arbre_decision * 'a arbre_decision  (* Nœud interne de l'arbre *)
+
+let cons_arbre t =
+  let n = log2 (List.length t) in  (* Calcul de la profondeur de l'arbre en fonction de la table de vérité *)
+  
+  (* Fonction auxiliaire pour construire l'arbre de décision *) 
+  let rec aux depth lst = 
+    if depth > n then 
+      Leaf (List.hd lst) 
+    else let (partie_gauche, partie_droite) = couper_liste_en_deux lst in 
+      Node (depth, aux (depth + 1) partie_gauche, aux (depth + 1) (partie_droite))
+  in
+
+  aux 1 t  (* Appel de la fonction auxiliaire avec une profondeur initiale de 1 *) 
+
+let rec liste_feuilles n =
+  match n with
+  | Leaf a -> [a]
+  | Node (_, left, right) -> (liste_feuilles left) @ (liste_feuilles right)
+
+                                                     
+
