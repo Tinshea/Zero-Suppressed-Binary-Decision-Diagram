@@ -124,4 +124,24 @@ let rec liste_feuilles n =
   | Node (_, left, right) -> (liste_feuilles left) @ (liste_feuilles right)
 
                                                      
+(*partie 3*)
+
+(* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
+type 'a listeDejaVus = (entier_64_bits * 'a arbre_decision) list
+
+(* Fonction pour compresser un arbre de décision*)
+let rec compressionParListe g ldv =
+  (*On parcours g via un parcours suffixe, soit n le noeud en cours de visite*)
+  match g with
+  (*Calcul du grand entier n1 correspondant à la liste des feuilles du sous-arbre enraciné en n*)
+  | Leaf a -> let n1 = liste_feuilles g in
+    (*si n1 1ere composante d'un couple dans ldv alors remplacer le pointeur vers n par un pointeur vers la 2nde composante du couple*)
+    if List.mem_assoc n1 ldv then
+      List.assoc n1 ldv
+    (*sinon ajouter en tete de ldv un couple constitué de n1 et d'un pointeur vers n*)
+    else
+      let ldv = (n1, g) :: ldv in
+      g
+  | Node (i, g1, g2) -> Node (i, compressionParListe g1 ldv, compressionParListe g2 ldv) (*On continue le parcours de g*)
+;;
 
