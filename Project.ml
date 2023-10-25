@@ -89,16 +89,18 @@ let () =
 let log2 x =
   int_of_float (log (float_of_int x) /. log 2.)
     
-let couper_liste_en_deux lst =
-  let l = List.length lst / 2 in
-  let rec aux acc1 acc2 acc3 liste =
-    match liste with
-    | [] -> (List.rev acc1, List.rev acc2)
-    | _ when acc3 = l -> (List.rev acc1, (acc2 @ liste))
-    | h :: t -> aux (h :: acc1) acc2 (acc3 + 1) t
-  in
-  aux [] [] 0 lst
-;; 
+let split l = 
+  let rec split_at_point lst n =
+    if n = 0 then
+      ([], lst)
+    else
+      match lst with
+      | [] -> ([], [])
+      | head :: tail ->
+          let left, right = split_at_point tail (n - 1) in
+          (head :: left, right) 
+  in let i = (List.length l)/2 in
+  split_at_point l i
 
 (* Définition d'une structure de données pour un arbre binaire de décision *)
 type 'a arbre_decision =
@@ -112,7 +114,7 @@ let cons_arbre t =
   let rec aux depth lst = 
     if depth > n then 
       Leaf (List.hd lst) 
-    else let (partie_gauche, partie_droite) = couper_liste_en_deux lst in 
+    else let (partie_gauche, partie_droite) = split lst in 
       Node (depth, aux (depth + 1) partie_gauche, aux (depth + 1) (partie_droite))
   in
 
@@ -121,27 +123,42 @@ let cons_arbre t =
 let rec liste_feuilles n =
   match n with
   | Leaf a -> [a]
-  | Node (_, left, right) -> (liste_feuilles left) @ (liste_feuilles right)
+  | Node (_, left, right) -> (liste_feuilles left) @ (liste_feuilles right)  
 
                                                      
 (*partie 3*)
 
 (* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
-type 'a listeDejaVus = (entier_64_bits * 'a arbre_decision) list
-
-(* Fonction pour compresser un arbre de décision*)
-let rec compressionParListe g ldv =
-  (*On parcours g via un parcours suffixe, soit n le noeud en cours de visite*)
+type 'a listeDejaVus = (entier_64_bits * 'a ref) list
+  
+let rec parcours_suffixe g =
   match g with
-  (*Calcul du grand entier n1 correspondant à la liste des feuilles du sous-arbre enraciné en n*)
-  | Leaf a -> let n1 = liste_feuilles g in
-    (*si n1 1ere composante d'un couple dans ldv alors remplacer le pointeur vers n par un pointeur vers la 2nde composante du couple*)
-    if List.mem_assoc n1 ldv then
-      List.assoc n1 ldv
-    (*sinon ajouter en tete de ldv un couple constitué de n1 et d'un pointeur vers n*)
-    else
-      let ldv = (n1, g) :: ldv in
-      g
-  | Node (i, g1, g2) -> Node (i, compressionParListe g1 ldv, compressionParListe g2 ldv) (*On continue le parcours de g*)
-;;
+  | Leaf a -> [a]
+  | Node (a, left, right) -> (parcours_suffixe left) @ (parcours_suffixe right) @ [a] 
 
+                               (*let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true)) *)
+let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4) 
+  
+let rec compressionParListe g ldv=
+  (* On parcourt g via un parcours suffixe, soit n le nœud en cours de visite *)
+  match g with
+  | Leaf n -> ldv 
+  | Node (r, left, right) ->
+      compressionParListe left ldv;
+      compressionParListe right ldv;
+      let x = liste_feuilles n in 
+      let (left, right) = split x
+          if for_all (fun x -> x = false) right then 
+            (* Faire pointer notre père vers notre fils gauche *) 
+          else 
+            let n1 = composition x in
+            if List.mem_assoc n1 ldv then
+              let p = List.assoc n1 ldv in 
+              let ldv = (n1, p) :: ldv in 
+            else
+              let ldv = (n1, ref n) :: ldv 
+              in 
+      
+
+
+      
