@@ -50,7 +50,7 @@ let rec completion lst n  =
 
 (* Fonction pour convertir une liste de bits en base 2 en un entier naturel*) 
 let composition bool_list =
-   (* Ici nous utilisons la méhtode des divisions successives en la remontant*) 
+  (* Ici nous utilisons la méthode des divisions successives en la remontant *)
   let rec bits_to_int64 acc bool_list =
     match bool_list with
     | [] -> 0
@@ -136,30 +136,27 @@ let rec parcours_suffixe g =
   | Leaf a -> [a]
   | Node (a, left, right) -> (parcours_suffixe left) @ (parcours_suffixe right) @ [a] 
 
-                               (*let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true)) *)
+(*let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true)) *)
 let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4) 
-  
+
+(*fonction permettant la compression d'un arbre de decision*)
 let rec compressionParListe g ldv =
-  (* On parcourt g via un parcours suffixe, soit n le nœud en cours de visite *)
   match g with
-  | Leaf _ -> g
-  | Node(n, left, right) ->
-      (*calcul de la liste_feuilles associee a n*)
-      let lf = liste_feuilles n in
-        (*si la deuxieme moitie ne contient que des false remplacer pointeur vers n par pointeur vers fils gauche*)
-        let moitie_gauche, moitie_droite = split lf in
-          if List.for_all (fun x -> x = false) moitie_droite then 
-            compressionParListe left ldv
-          else
-            (*sinon calculer grand entier n1 correspondant a lf*)
-            let n1 = composition lf in
-              match List.find_opt (fun (x,_) -> x = n1) ldv with
-              (*si n1 1ere composante d'un couple dans ldv alors remplacer pointeur vers n par celui de la 2nd composante du couple*)
-              | Some (_, ref_node) -> compressionParListe (Node(n, ref_node, right)) ldv
-              (*sinon ajouter en tete de ldv un couple constitue de n1 et d'un pointeur vers n*)
-              | None -> 
-                let ref_node = ref (Node(n, left, right)) in
-                compressionParListe (Node(n, Leaf n1, right)) ((n1, ref_node) :: ldv)
+  | Leaf _ -> ldv
+  | Node (_, left, right) ->
+      let feuilles_gauche = liste_feuilles left in
+      let (partie_gauche, partie_droite) = split feuilles_gauche in
 
+      if List.for_all (fun x -> x = false) partie_droite then
+        compressionParListe left ldv
+      else
+        let n = composition feuilles_gauche in
+        match List.find_opt (fun (x, _) -> x = n) ldv with
+        | None ->
+            let pointeur = ref left in
+            compressionParListe left ((n, pointeur) :: ldv)
+        | Some (_, ptr) ->
+            compressionParListe !ptr ldv
 
-      
+(*let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
+compressionParListe a []*)
