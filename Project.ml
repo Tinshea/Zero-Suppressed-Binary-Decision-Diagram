@@ -139,26 +139,27 @@ let rec parcours_suffixe g =
                                (*let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true)) *)
 let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4) 
   
-let rec compressionParListe g ldv=
+let rec compressionParListe g ldv =
   (* On parcourt g via un parcours suffixe, soit n le nœud en cours de visite *)
   match g with
-  | Leaf n -> ldv 
-  | Node (r, left, right) ->
-      compressionParListe left ldv;
-      compressionParListe right ldv;
-      let x = liste_feuilles n in 
-      let (left, right) = split x
-          if for_all (fun x -> x = false) right then 
-            (* Faire pointer notre père vers notre fils gauche *) 
-          else 
-            let n1 = composition x in
-            if List.mem_assoc n1 ldv then
-              let p = List.assoc n1 ldv in 
-              let ldv = (n1, p) :: ldv in 
-            else
-              let ldv = (n1, ref n) :: ldv 
-              in 
-      
+  | Leaf _ -> g
+  | Node(n, left, right) ->
+      (*calcul de la liste_feuilles associee a n*)
+      let lf = liste_feuilles n in
+        (*si la deuxieme moitie ne contient que des false remplacer pointeur vers n par pointeur vers fils gauche*)
+        let moitie_gauche, moitie_droite = split lf in
+          if List.for_all (fun x -> x = false) moitie_droite then 
+            compressionParListe left ldv
+          else
+            (*sinon calculer grand entier n1 correspondant a lf*)
+            let n1 = composition lf in
+              match List.find_opt (fun (x,_) -> x = n1) ldv with
+              (*si n1 1ere composante d'un couple dans ldv alors remplacer pointeur vers n par celui de la 2nd composante du couple*)
+              | Some (_, ref_node) -> compressionParListe (Node(n, ref_node, right)) ldv
+              (*sinon ajouter en tete de ldv un couple constitue de n1 et d'un pointeur vers n*)
+              | None -> 
+                let ref_node = ref (Node(n, left, right)) in
+                compressionParListe (Node(n, Leaf n1, right)) ((n1, ref_node) :: ldv)
 
 
       
