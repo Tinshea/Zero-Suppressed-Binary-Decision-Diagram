@@ -1,9 +1,9 @@
 (*partie 1*)
 
 (* Définition d'une structure de liste pour représenter un entier 64 bits *)
-type entier_64_bits = int64 list
+type grand_entier = int64 list
 
-(* Fonction pour insérer un entier 64 bits à la fin de la liste *)
+(* Fonction pour insérer un entier 64 bits en tete de liste *)
 let inserer_entier n liste =
   n :: liste
 
@@ -18,25 +18,7 @@ let supprimer_tete liste  =
   match liste with
   | [] -> [] 
   | _ :: tl -> tl
-  
 
-(* Fonction pour convertir un entier naturel en une liste de bits en base 2 *) 
-let rec decomposition lst = 
-  match lst with 
-  | [] -> []
-  | x :: xs -> 
-      let rec int64_to_bits x = 
-        if x = 0L then
-          []
-        else
-          (* Ici nous utilisons la méhtode des divisions successives *) 
-          let quotient = Int64.div x 2L in
-          let reste = Int64.rem x 2L in
-          let bits_de_poids_faible = if reste = 1L then [true] else [false] in
-          bits_de_poids_faible @ int64_to_bits quotient
-      in
-      int64_to_bits x @ decomposition xs
-        
 (* Fonction pour tronquée la liste ne contenant que ses n premiers éléments, soit la liste complétée à
 droite, de taille n, complétée par des valeurs false *)   
 let rec completion lst n  =
@@ -47,40 +29,59 @@ let rec completion lst n  =
     | [] -> false :: completion [] (n - 1)
     | h :: t -> h :: completion t (n - 1)
 
+(* Fonction pour convertir un entier naturel en une liste de bits en base 2 *) 
+let rec decomposition (lst : grand_entier) : bool list =
+  let l = List.length lst in
+  match lst with
+  | [] -> []
+  | x :: xs -> 
+    let rec int64_to_bits (n : int64) : bool list =
+      if n = 0L then
+        []
+      else
+        let quotient = Int64.div x 2L in
+        let reste = Int64.rem x 2L in
+        let bits_de_poids_faible = if reste = 1L then [true] else [false] in
+        bits_de_poids_faible @ int64_to_bits quotient
+    in
+    if l = 1 then
+      int64_to_bits x @ decomposition xs
+    else
+      (completion (int64_to_bits x) 64) @ decomposition xs
 
-(* Fonction pour convertir une liste de bits en base 2 en un entier naturel*) 
-let composition bool_list =
-  (* Ici nous utilisons la méthode des divisions successives en la remontant *)
-  let rec bits_to_int64 acc bool_list =
+
+(* Fonction pour convertir une liste de bits en base 2 en un grand_entier*) 
+let composition (bool_list : bool list) : grand_entier =
+  let rec bits_to_grand_entier (acc : int64) (e : int64) (bool_list : bool list) (cpt : int) (res : grand_entier) : grand_entier =
     match bool_list with
-    | [] -> 0
-    | x::xs -> if x then acc + bits_to_int64 (2*acc) xs else bits_to_int64 (2*acc) xs
-  in bits_to_int64 1 bool_list
-    
-    
+    | [] -> inserer_entier e res
+    | x::xs -> 
+      if cpt = 64 then
+        bits_to_grand_entier 1L 0L (x::xs) 0 (inserer_entier acc res)
+      else
+        if x then
+          bits_to_grand_entier (Int64.mul 2L acc) (Int64.add acc e) xs (cpt + 1) res
+        else
+          bits_to_grand_entier (Int64.mul 2L acc) e xs (cpt + 1) res
+  in bits_to_grand_entier 1L 0L bool_list 0 []
+         
+     
 let table x n = 
   completion (decomposition x) n 
 
 (* Fonction pour générer un grand entier aléatoire de n bits au maximum *)
-let gen_alea (n : int) : int64 =
-  let l = n / 64 in
-  let rec gen_part (remaining_bits : int) (lst : entier_64_bits) =
-    if remaining_bits <= 0 then
+let gen_alea (n : int) : grand_entier =
+  let l = n/64 in
+  let rec gen_part (bits_restants : int) (lst : grand_entier) =
+    if bits_restants <= 0 then
       lst
     else
-      let alea64 = Int64.of_int (Random.int (1 lsl 6)) in
-      gen_part (remaining_bits - 64) (inserer_entier alea64 lst)
+      let alea = Random.int64 Int64.max_int in
+      gen_part (bits_restants - 64) (inserer_entier alea lst)
   in
-  let alea_tail = Int64.of_int (Random.int (1 lsl (n mod 64))) in
-  let alea_list = gen_part (n - l * 64) [] in
-  List.fold_left Int64.add alea_tail alea_list
-
-(* Exemple d'utilisation *)
-let () =
-  Random.self_init ();
-  let n = 100 in
-  let alea_entier = gen_alea n in
-  Printf.printf "Grand entier aléatoire de %d bits : %Ld\n" n alea_entier
+  let alea_tail = Random.int64 (Int64.shift_left 1L (n - l * 64)) in
+  let alea_head = gen_part (n - l * 64) [] in
+  alea_head @ [alea_tail]
 
     
 (*partie 2*)
@@ -104,7 +105,7 @@ let split l =
 
 (* Définition d'une structure de données pour un arbre binaire de décision *)
 type 'a arbre_decision =
-  | Leaf of 'a  (* Feuille de l'arbre contenant une valeur *)
+  | Leaf of bool  (* Feuille de l'arbre contenant un booleen*)
   | Node of int * 'a arbre_decision * 'a arbre_decision  (* Nœud interne de l'arbre *)
 
 let cons_arbre t =
@@ -129,34 +130,33 @@ let rec liste_feuilles n =
 (*partie 3*)
 
 (* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
-type 'a listeDejaVus = (entier_64_bits * 'a ref) list
-  
-let rec parcours_suffixe g =
-  match g with
-  | Leaf a -> [a]
-  | Node (a, left, right) -> (parcours_suffixe left) @ (parcours_suffixe right) @ [a] 
+type 'a listeDejaVus = (grand_entier * 'a ref) list
 
-(*let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true)) *)
-let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4) 
+let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
+(*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
 
 (*fonction permettant la compression d'un arbre de decision*)
-let rec compressionParListe g ldv =
-  match g with
-  | Leaf _ -> ldv
-  | Node (_, left, right) ->
-      let feuilles_gauche = liste_feuilles left in
-      let (partie_gauche, partie_droite) = split feuilles_gauche in
+let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : ('a arbre_decision) =
+  let arbre = ref g in
+  match !arbre with
+  | Leaf b -> !arbre
+  | Node (n, left, right) ->
+    let lf = liste_feuilles !arbre in
+    let pg,pd = split lf in
+    if List.for_all (fun x -> x = false) pd then
+      left
+    else
+      let n = composition lf in
+      match List.find_opt (fun (x,_) -> x = n) ldv with
+      | Some (_,p) -> !p
+      | None -> 
+        arbre := Node (n, left, right);
+        let new_ldv = (n, arbre) :: ldv in
+        let compressed_left = compressionParListe left ldv in
+        let compressed_right = compressionParListe right ldv in
+        Node (n, compressed_left, compressed_right) 
 
-      if List.for_all (fun x -> x = false) partie_droite then
-        compressionParListe left ldv
-      else
-        let n = composition feuilles_gauche in
-        match List.find_opt (fun (x, _) -> x = n) ldv with
-        | None ->
-            let pointeur = ref left in
-            compressionParListe left ((n, pointeur) :: ldv)
-        | Some (_, ptr) ->
-            compressionParListe !ptr ldv
 
+     
 (*let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
 compressionParListe a []*)
