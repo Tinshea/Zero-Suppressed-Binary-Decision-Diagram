@@ -125,8 +125,7 @@ let cons_arbre t =
     else let (partie_gauche, partie_droite) = split lst in 
       Node (depth, aux (depth + 1) partie_gauche, aux (depth + 1) (partie_droite))
   in
-
-  aux 1 t  (* Appel de la fonction auxiliaire avec une profondeur initiale de 1 *) 
+    aux 1 t;;  (* Appel de la fonction auxiliaire avec une profondeur initiale de 1 *) 
 
 let rec liste_feuilles n =
   match n with
@@ -172,20 +171,30 @@ let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : 'a
             Node (n, compressed_left, compressed_right) 
 
      
-(*let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
-compressionParListe a (ref [])*)
+let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
+compressionParListe a (ref [])
 
-(*Fonction qui construit un fichier representant le graphe en langage dot*)
-let rec dot fmt tree =
-  let rec aux fmt = function
-    | Leaf data -> fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data
-    | Node (data, left, right) ->
-        fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data;
-        fprintf fmt "  \"%a\" -> \"%a\" [style=dashed]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match left with Leaf l -> l | Node (d, _, _) -> d);
-        fprintf fmt "  \"%a\" -> \"%a\"@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match right with Leaf l -> l | Node (d, _, _) -> d);
-        aux fmt left;
-        aux fmt right
+(* Fonction qui construit un fichier représentant le graphe en langage dot *)
+open Printf 
+let rec dot tree =
+  let oc = open_out "monfichier.dot" in
+  fprintf oc "digraph  {\n";
+  
+  let rec aux parent = 
+    match parent with 
+    | Leaf a -> 
+                if a then fprintf oc " %d [label = True] \n" (Obj.magic parent)
+                else fprintf oc "  %d [label = False] \n" (Obj.magic parent)
+
+    | Node (n, left, right) ->
+                              fprintf oc "  %d [label = %d];\n" (Obj.magic parent) n;
+                              fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) (Obj.magic left);
+                              fprintf oc "  %d -> %d  \n" (Obj.magic parent) (Obj.magic right);
+                              aux left;
+                              aux right;
   in
-  fprintf fmt "digraph Tree {@\n";
-  aux fmt tree;
-  fprintf fmt "}@."
+  aux tree;  
+  fprintf oc "}\n";
+  close_out oc;;
+  
+  dot a
