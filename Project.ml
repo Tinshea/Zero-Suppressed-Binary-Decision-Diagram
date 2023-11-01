@@ -137,33 +137,54 @@ let rec liste_feuilles n =
 (*partie 3*)
 
 (* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
-type 'a listeDejaVus = (grand_entier * 'a arbre_decision ref) list
+type 'a listeDejaVus = (grand_entier * 'a arbre_decision ref) list ref
 
 let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
 (*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
 
 (*fonction permettant la compression d'un arbre de decision*)
-let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : ('a arbre_decision) =
+let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : 'a arbre_decision =
   let arbre = ref g in
   match !arbre with
-  | Leaf b -> !arbre
+  | Leaf b -> 
+    let n1 = composition [b] in
+    (match List.find_opt (fun (x, _) -> x = n1) !ldv with
+    | Some (_, p) -> !p
+    | None -> 
+      arbre := Leaf b;
+      ldv := (n1, arbre) :: !ldv;
+      !arbre)
   | Node (n, left, right) ->
     let lf = liste_feuilles !arbre in
-    let pg,pd = split lf in
+    let pg, pd = split lf in
     if List.for_all (fun x -> x = false) pd then
       left
     else
       let n1 = composition lf in
-      match List.find_opt (fun (x,_) -> x = n1) ldv with
-      | Some (_,p) -> !p
+      match List.find_opt (fun (x, _) -> x = n1) !ldv with
+      | Some (_, p) -> !p
       | None -> 
         arbre := Node (n, left, right);
-        let new_ldv = (n1, arbre) :: ldv in
-        let compressed_left = compressionParListe left ldv in
-        let compressed_right = compressionParListe right ldv in
+        let new_ldv = (n1, arbre) :: !ldv in
+        let compressed_left = compressionParListe left (ref new_ldv) in
+        let compressed_right = compressionParListe right (ref new_ldv) in
         Node (n, compressed_left, compressed_right) 
-
 
      
 (*let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
-compressionParListe a []*)
+compressionParListe a (ref [])*)
+
+(*Fonction qui construit un fichier representant le graphe en langage dot*)
+let rec dot fmt tree =
+  let rec aux fmt = function
+    | Leaf data -> fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data
+    | Node (data, left, right) ->
+      fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data;
+      fprintf fmt "  \"%a\" -> \"%a\" [style=dashed]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match left with Leaf l -> l | Node (d, _, _) -> d);
+      fprintf fmt "  \"%a\" -> \"%a\"@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match right with Leaf l -> l | Node (d, _, _) -> d);
+      aux fmt left;
+      aux fmt right
+  in
+  fprintf fmt "digraph Tree {@\n";
+  aux fmt tree;
+  fprintf fmt "}@."
