@@ -29,25 +29,26 @@ let rec completion lst n  =
     | [] -> false :: completion [] (n - 1)
     | h :: t -> h :: completion t (n - 1)
 
-(* Fonction pour convertir un entier naturel en une liste de bits en base 2 *) 
+(* Fonction pour convertir un entier naturel en une liste de bits en base 2 *)
 let rec decomposition (lst : grand_entier) : bool list =
-  let l = List.length lst in
-  match lst with
-  | [] -> []
-  | x :: xs -> 
-      let rec int64_to_bits (n : int64) : bool list =
-        if n = 0L then
-          []
-        else
-          let quotient = Int64.div x 2L in
-          let reste = Int64.rem x 2L in
-          let bits_de_poids_faible = if reste = 1L then [true] else [false] in
-          bits_de_poids_faible @ int64_to_bits quotient
-      in
-      if l = 1 then
-        int64_to_bits x @ decomposition xs
-      else
-        (completion (int64_to_bits x) 64) @ decomposition xs
+  let rec int64_to_bits (n : int64) : bool list =
+    if n = 0L then
+      []
+    else
+      let quotient = Int64.div n 2L in
+      let reste = Int64.rem n 2L in
+      let bits_de_poids_faible = if reste = 1L then [true] else [false] in
+      bits_de_poids_faible @ int64_to_bits quotient
+  in
+  let rec decompose_acc acc = function
+    | [] -> acc
+    | [x] -> acc @ int64_to_bits x
+    | x :: xs ->
+        let bits = int64_to_bits x in
+        let padded_bits = completion bits 64 in
+        decompose_acc ( padded_bits @ acc) xs
+  in
+  decompose_acc [] lst
 
 
 (* Fonction pour convertir une liste de bits en base 2 en un grand_entier*) 
