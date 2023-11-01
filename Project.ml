@@ -35,19 +35,19 @@ let rec decomposition (lst : grand_entier) : bool list =
   match lst with
   | [] -> []
   | x :: xs -> 
-    let rec int64_to_bits (n : int64) : bool list =
-      if n = 0L then
-        []
+      let rec int64_to_bits (n : int64) : bool list =
+        if n = 0L then
+          []
+        else
+          let quotient = Int64.div x 2L in
+          let reste = Int64.rem x 2L in
+          let bits_de_poids_faible = if reste = 1L then [true] else [false] in
+          bits_de_poids_faible @ int64_to_bits quotient
+      in
+      if l = 1 then
+        int64_to_bits x @ decomposition xs
       else
-        let quotient = Int64.div x 2L in
-        let reste = Int64.rem x 2L in
-        let bits_de_poids_faible = if reste = 1L then [true] else [false] in
-        bits_de_poids_faible @ int64_to_bits quotient
-    in
-    if l = 1 then
-      int64_to_bits x @ decomposition xs
-    else
-      (completion (int64_to_bits x) 64) @ decomposition xs
+        (completion (int64_to_bits x) 64) @ decomposition xs
 
 
 (* Fonction pour convertir une liste de bits en base 2 en un grand_entier*) 
@@ -56,9 +56,9 @@ let composition (bool_list : bool list) : grand_entier =
     match bool_list with
     | [] -> inserer_entier e res
     | x::xs -> 
-      if cpt = 64 then
-        bits_to_grand_entier 1L 0L (x::xs) 0 (inserer_entier acc res)
-      else
+        if cpt = 64 then
+          bits_to_grand_entier 1L 0L (x::xs) 0 (inserer_entier acc res)
+        else
         if x then
           bits_to_grand_entier (Int64.mul 2L acc) (Int64.add acc e) xs (cpt + 1) res
         else
@@ -147,28 +147,29 @@ let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : 'a
   let arbre = ref g in
   match !arbre with
   | Leaf b -> 
-    let n1 = composition [b] in
-    (match List.find_opt (fun (x, _) -> x = n1) !ldv with
-    | Some (_, p) -> !p
-    | None -> 
-      arbre := Leaf b;
-      ldv := (n1, arbre) :: !ldv;
-      !arbre)
+      let n1 = composition [b] in
+      (match List.find_opt (fun (x, _) -> x = n1) !ldv with
+       | Some (_, p) -> !p
+       | None -> 
+           arbre := Leaf b;
+           ldv := (n1, arbre) :: !ldv;
+           !arbre)
   | Node (n, left, right) ->
-    let lf = liste_feuilles !arbre in
-    let pg, pd = split lf in
-    if List.for_all (fun x -> x = false) pd then
-      left
-    else
-      let n1 = composition lf in
-      match List.find_opt (fun (x, _) -> x = n1) !ldv with
-      | Some (_, p) -> !p
-      | None -> 
-        arbre := Node (n, left, right);
-        let new_ldv = (n1, arbre) :: !ldv in
-        let compressed_left = compressionParListe left (ref new_ldv) in
-        let compressed_right = compressionParListe right (ref new_ldv) in
-        Node (n, compressed_left, compressed_right) 
+      let lf = liste_feuilles !arbre in
+      let pg, pd = split lf in
+      if List.for_all (fun x -> x = false) pd then 
+        (arbre := left;
+         compressionParListe !arbre ldv)
+      else
+        let n1 = composition lf in
+        match List.find_opt (fun (x, _) -> x = n1) !ldv with
+        | Some (_, p) -> !p
+        | None -> 
+            arbre := Node (n, left, right);
+            let new_ldv = (n1, arbre) :: !ldv in
+            let compressed_left = compressionParListe left (ref new_ldv) in
+            let compressed_right = compressionParListe right (ref new_ldv) in
+            Node (n, compressed_left, compressed_right) 
 
      
 (*let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
@@ -179,11 +180,11 @@ let rec dot fmt tree =
   let rec aux fmt = function
     | Leaf data -> fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data
     | Node (data, left, right) ->
-      fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data;
-      fprintf fmt "  \"%a\" -> \"%a\" [style=dashed]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match left with Leaf l -> l | Node (d, _, _) -> d);
-      fprintf fmt "  \"%a\" -> \"%a\"@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match right with Leaf l -> l | Node (d, _, _) -> d);
-      aux fmt left;
-      aux fmt right
+        fprintf fmt "  \"%a\" [label=\"%a\"]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") data;
+        fprintf fmt "  \"%a\" -> \"%a\" [style=dashed]@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match left with Leaf l -> l | Node (d, _, _) -> d);
+        fprintf fmt "  \"%a\" -> \"%a\"@\n" (fun fmt -> fprintf fmt "%a") data (fun fmt -> fprintf fmt "%a") (match right with Leaf l -> l | Node (d, _, _) -> d);
+        aux fmt left;
+        aux fmt right
   in
   fprintf fmt "digraph Tree {@\n";
   aux fmt tree;
