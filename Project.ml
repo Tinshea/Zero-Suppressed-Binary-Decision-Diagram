@@ -137,7 +137,7 @@ let rec liste_feuilles n =
 (*partie 3*)
 
 (* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
-type 'a listeDejaVus = (grand_entier * 'a ref) list
+type 'a listeDejaVus = (grand_entier * 'a arbre_decision ref) list
 
 let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
 (*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
@@ -153,12 +153,12 @@ let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : ('
     if List.for_all (fun x -> x = false) pd then
       left
     else
-      let n = composition lf in
-      match List.find_opt (fun (x,_) -> x = n) ldv with
+      let n1 = composition lf in
+      match List.find_opt (fun (x,_) -> x = n1) ldv with
       | Some (_,p) -> !p
       | None -> 
         arbre := Node (n, left, right);
-        let new_ldv = (n, arbre) :: ldv in
+        let new_ldv = (n1, arbre) :: ldv in
         let compressed_left = compressionParListe left ldv in
         let compressed_right = compressionParListe right ldv in
         Node (n, compressed_left, compressed_right) 
