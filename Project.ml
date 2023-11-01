@@ -65,23 +65,30 @@ let composition (bool_list : bool list) : grand_entier =
           bits_to_grand_entier (Int64.mul 2L acc) e xs (cpt + 1) res
   in bits_to_grand_entier 1L 0L bool_list 0 []
          
-     
+(*Fonction qui compose la table de verite a partir de x*)     
 let table x n = 
   completion (decomposition x) n 
 
+(* Fonction pour générer un entier aléatoire sur 64 bits *)
+let gen_entier_aleatoire () =
+  Random.int64 Int64.max_int
+
 (* Fonction pour générer un grand entier aléatoire de n bits au maximum *)
-let gen_alea (n : int) : grand_entier =
-  let l = n/64 in
-  let rec gen_part (bits_restants : int) (lst : grand_entier) =
-    if bits_restants <= 0 then
-      lst
+let gen_alea n =
+  let rec gen_partie_aleatoire m =
+    if m <= 64 then
+      []
     else
-      let alea = Random.int64 Int64.max_int in
-      gen_part (bits_restants - 64) (inserer_entier alea lst)
+      gen_entier_aleatoire () :: gen_partie_aleatoire (m - 64)
   in
-  let alea_tail = Random.int64 (Int64.shift_left 1L (n - l * 64)) in
-  let alea_head = gen_part (n - l * 64) [] in
-  alea_head @ [alea_tail]
+  let aleatoire_partie = gen_partie_aleatoire n in
+  let dernier_entier = Int64.pred (Int64.shift_left 1L (n mod 64)) in
+  let entier_final = if n mod 64 = 0 then
+      gen_entier_aleatoire ()
+    else
+      Int64.logand dernier_entier (gen_entier_aleatoire ())
+  in
+  aleatoire_partie @ [entier_final]
 
     
 (*partie 2*)
