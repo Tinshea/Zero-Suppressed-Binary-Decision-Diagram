@@ -112,9 +112,9 @@ let split l =
   split_at_point l i
 
 (* Définition d'une structure de données pour un arbre binaire de décision *)
-type 'a arbre_decision =
+type arbre_decision =
   | Leaf of bool  (* Feuille de l'arbre contenant un booleen*)
-  | Node of int * 'a arbre_decision * 'a arbre_decision  (* Nœud interne de l'arbre *)
+  | Node of int * arbre_decision * arbre_decision  (* Nœud interne de l'arbre *)
 
 let cons_arbre t =
   let n = log2 (List.length t) in  (* Calcul de la profondeur de l'arbre en fonction de la table de vérité *)
@@ -137,43 +137,38 @@ let rec liste_feuilles n =
 (*partie 3*)
 
 (* Définition d'une structure de données permettant d’encoder une liste dont les éléments sont des couples avec la première composante étant un grand entier et la seconde composante un pointeur vers un nœud d’un graphe*)
-type 'a listeDejaVus = (grand_entier * 'a arbre_decision ref) list ref
+type listeDejaVus = (grand_entier * arbre_decision) list
 
 let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
 (*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
 
 (*fonction permettant la compression d'un arbre de decision*)
-let rec compressionParListe (g : 'a arbre_decision) (ldv : 'a listeDejaVus) : 'a arbre_decision =
-  let arbre = ref g in
-  match !arbre with
-  | Leaf b -> 
-      let n1 = composition [b] in
-      (match List.find_opt (fun (x, _) -> x = n1) !ldv with
-       | Some (_, p) -> !p
-       | None -> 
-           arbre := Leaf b;
-           ldv := (n1, arbre) :: !ldv;
-           !arbre)
-  | Node (n, left, right) ->
-      let lf = liste_feuilles !arbre in
-      let pg, pd = split lf in
-      if List.for_all (fun x -> x = false) pd then 
-        (arbre := left;
-         compressionParListe !arbre ldv)
-      else
-        let n1 = composition lf in
-        match List.find_opt (fun (x, _) -> x = n1) !ldv with
-        | Some (_, p) -> !p
-        | None -> 
-            arbre := Node (n, left, right);
-            let new_ldv = (n1, arbre) :: !ldv in
-            let compressed_left = compressionParListe left (ref new_ldv) in
-            let compressed_right = compressionParListe right (ref new_ldv) in
-            Node (n, compressed_left, compressed_right) 
-
-     
+let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
+  match g with
+  | Leaf a -> (g,ldv)
+  | Node(n,left,right) ->
+    (*parcours suffixe de l'arbre*)
+    let (gauche,ldv1) = compressionParListe left ldv in
+    let (droite,ldv2) = compressionParListe right ldv in
+    (*calcul de la liste feuille associee a n*)
+    let lf = liste_feuilles g in
+    let pg,pd = split lf in
+    (*si il n'y a que des false a droite*)
+    if (List.for_all (fun x -> x = false) pd) then
+      (*on remplace le pointeur vers n par un pointeur vers left*)
+      (gauche,ldv1)
+    else
+      (*calcul du grand entier n1 correspondant a lf*)
+      let n1 = composition lf in
+      (*si n1 est la premiere composante d'un element dans ldv*)
+      match (List.find_opt (fun (x,_) -> x = n1) ldv) with
+        | Some (_,ref) -> (ref,ldv)
+        | None ->
+          (Node(n,gauche,droite),(n1,g)::ldv2)
+    
+   
 let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
-compressionParListe a (ref [])
+compressionParListe a []
 
 (* Fonction qui construit un fichier représentant le graphe en langage dot *)
 open Printf 
