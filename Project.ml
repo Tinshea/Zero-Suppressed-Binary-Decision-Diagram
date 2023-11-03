@@ -151,7 +151,7 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
     (match (List.find_opt (fun (x,_) -> x = n1) ldv) with
     | Some (_,abr) -> (abr,ldv)
     | None ->
-      let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv2))
+      let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv))
   | Node(n,left,right) ->
     (*parcours suffixe de l'arbre*)
     let (gauche,ldv1) = compressionParListe left ldv in
