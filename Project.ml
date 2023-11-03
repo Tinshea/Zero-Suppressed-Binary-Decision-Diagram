@@ -164,7 +164,7 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
       match (List.find_opt (fun (x,_) -> x = n1) ldv) with
         | Some (_,ref) -> (ref,ldv)
         | None ->
-          (Node(n,gauche,droite),(n1,g)::ldv2)
+          (Node(n,gauche,droite),(n1,g)::ldv)
     
    
 let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
