@@ -162,7 +162,7 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
       let n1 = composition lf in
       (*si n1 est la premiere composante d'un element dans ldv*)
       match (List.find_opt (fun (x,_) -> x = n1) ldv) with
-        | Some (_,ref) -> (ref,ldv)
+        | Some (_,abr) -> (abr,ldv)
         | None ->
           (Node(n,gauche,droite),(n1,g)::ldv)
     
