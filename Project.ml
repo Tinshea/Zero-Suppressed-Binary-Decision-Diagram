@@ -145,7 +145,13 @@ let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf tr
 (*fonction permettant la compression d'un arbre de decision*)
 let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
   match g with
-  | Leaf a -> (g,ldv)
+  | Leaf a -> 
+    let lf = liste_feuilles g in
+    let n1 = composition lf in
+    (match (List.find_opt (fun (x,_) -> x = n1) ldv) with
+    | Some (_,abr) -> (abr,ldv)
+    | None ->
+      let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv2))
   | Node(n,left,right) ->
     (*parcours suffixe de l'arbre*)
     let (gauche,ldv1) = compressionParListe left ldv in
@@ -164,7 +170,8 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
       match (List.find_opt (fun (x,_) -> x = n1) ldv) with
         | Some (_,abr) -> (abr,ldv)
         | None ->
-          (Node(n,gauche,droite),(n1,g)::ldv)
+          let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv2)
+          
     
    
 let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
