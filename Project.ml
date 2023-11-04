@@ -94,10 +94,7 @@ let gen_alea n =
     
 (*partie 2*)
 
-(* Fonction auxiliaire pour calculer le logarithme en base 2 *)
-let log2 x =
-  int_of_float (log (float_of_int x) /. log 2.)
-    
+(* Fonction auxiliaire pour calculer le logarithme en base 2 *)   
 let split l = 
   let rec split_at_point lst n =
     if n = 0 then
@@ -116,17 +113,19 @@ type arbre_decision =
   | Leaf of bool  (* Feuille de l'arbre contenant un booleen*)
   | Node of int * arbre_decision * arbre_decision  (* Nœud interne de l'arbre *)
 
-let cons_arbre t =
-  let n = log2 (List.length t) in  (* Calcul de la profondeur de l'arbre en fonction de la table de vérité *)
-  
-  (* Fonction auxiliaire pour construire l'arbre de décision *) 
-  let rec aux depth lst = 
-    if depth > n then 
-      Leaf (List.hd lst) 
-    else let (partie_gauche, partie_droite) = split lst in 
-      Node (depth, aux (depth + 1) partie_gauche, aux (depth + 1) (partie_droite))
-  in
-    aux 1 t;;  (* Appel de la fonction auxiliaire avec une profondeur initiale de 1 *) 
+  let cons_arbre t =
+    let length_t = List.length t in
+    let n = if length_t mod 2 <> 0 then completion t (length_t + 1) else t in
+    
+    (* Fonction auxiliaire pour construire l'arbre de décision *)
+    let rec aux depth lst = 
+      if List.length lst = 1 then 
+        Leaf (List.hd lst) 
+      else
+        let (partie_gauche, partie_droite) = split lst in 
+        Node (depth, aux (depth + 1) partie_gauche, aux (depth + 1) partie_droite)
+    in
+    aux 1 n
 
 let rec liste_feuilles n =
   match n with
@@ -141,6 +140,9 @@ type listeDejaVus = (grand_entier * arbre_decision) list
 
 let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
 (*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
+let print_list lst =
+  List.iter (fun x -> print_int x; print_string " ") lst;
+  print_newline ();;
 
 (*fonction permettant la compression d'un arbre de decision*)
 let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
@@ -151,11 +153,11 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
     (match (List.find_opt (fun (x,_) -> x = n1) ldv) with
     | Some (_,abr) -> (abr,ldv)
     | None ->
-      let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv))
+      let nouveau = Leaf a in (nouveau,(n1,nouveau)::ldv))
   | Node(n,left,right) ->
     (*parcours suffixe de l'arbre*)
     let (gauche,ldv1) = compressionParListe left ldv in
-    let (droite,ldv2) = compressionParListe right ldv in
+    let (droite,ldv2) = compressionParListe right ldv1 in
     (*calcul de la liste feuille associee a n*)
     let lf = liste_feuilles g in
     let pg,pd = split lf in
@@ -200,4 +202,6 @@ let rec dot tree =
   fprintf oc "}\n";
   close_out oc;;
   
-  dot a
+  (*let tree = cons_arbre (decomposition [25899L]) in dot tree *)
+  let (o,n) = compressionParListe (cons_arbre (decomposition [25899L])) [] in  
+    dot o 
