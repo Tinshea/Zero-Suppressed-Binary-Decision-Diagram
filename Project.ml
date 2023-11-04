@@ -205,3 +205,48 @@ let rec dot tree =
   (*let tree = cons_arbre (decomposition [25899L]) in dot tree *)
   let (o,n) = compressionParListe (cons_arbre (decomposition [25899L])) [] in  
     dot o 
+
+  (*Partie 4*)
+
+  type arbre_deja_vus = ArbreVide | Noeud of bool * arbre_deja_vus * arbre_deja_vus
+
+let rec compressionParArbre (g : arbre_decision) (arbre_deja_vus : arbre_deja_vus) =
+  match g with
+  | Leaf a ->
+    let lf = liste_feuilles g in
+    let n1 = composition lf in
+    (match chercherDansArbre n1 arbre_deja_vus with
+    | Some abr -> (abr, arbre_deja_vus)
+    | None ->
+      let nouveau = Leaf a in (nouveau, insererDansArbre n1 nouveau arbre_deja_vus))
+  | Node (n, left, right) ->
+    let (gauche, arbre_deja_vus1) = compressionParArbre left arbre_deja_vus in
+    let (droite, arbre_deja_vus2) = compressionParArbre right arbre_deja_vus1 in
+    let lf = liste_feuilles g in
+    let pg, pd = split lf in
+    if List.for_all (fun x -> x = false) pd then
+      (gauche, arbre_deja_vus1)
+    else
+      let n1 = composition lf in
+      match chercherDansArbre n1 arbre_deja_vus2 with
+      | Some abr -> (abr, arbre_deja_vus2)
+      | None ->
+        let nouveau = Node (n, gauche, droite) in (nouveau, insererDansArbre n1 nouveau arbre_deja_vus2)
+
+and chercherDansArbre n arbre =
+  (* Fonction pour chercher un nœud dans l'arbre de recherche *)
+  match arbre with
+  | ArbreVide -> None
+  | Noeud (v, gauche, droite) ->
+    if n = v then Some arbre
+    else if n < v then chercherDansArbre n gauche
+    else chercherDansArbre n droite
+
+and insererDansArbre n abr arbre =
+  (* Fonction pour insérer un nœud dans l'arbre de recherche *)
+  match arbre with
+  | ArbreVide -> Noeud (n, ArbreVide, abr)
+  | Noeud (v, gauche, droite) ->
+    if n = v then arbre
+    else if n < v then Noeud (v, insererDansArbre n abr gauche, droite)
+    else Noeud (v, gauche, insererDansArbre n abr droite)
