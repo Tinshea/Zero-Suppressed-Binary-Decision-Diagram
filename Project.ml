@@ -140,9 +140,6 @@ type listeDejaVus = (grand_entier * arbre_decision) list
 
 let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf true))
 (*let arb = Node(5, Node(3, Leaf 1, Leaf 2), Leaf 4)*)
-let print_list lst =
-  List.iter (fun x -> print_int x; print_string " ") lst;
-  print_newline ();;
 
 (*fonction permettant la compression d'un arbre de decision*)
 let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
@@ -176,8 +173,6 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
           
     
    
-let a = Node (1, Node (2, Node(3, Leaf false, Leaf true), Node(3, Leaf true, Leaf false)), Node (2, Node(3, Leaf true, Leaf true), Node(3, Leaf false, Leaf false)));;
-compressionParListe a []
 
 (* Fonction qui construit un fichier représentant le graphe en langage dot *)
 open Printf 
@@ -206,47 +201,74 @@ let rec dot tree =
   let (o,n) = compressionParListe (cons_arbre (decomposition [25899L])) [] in  
     dot o 
 
-  (*Partie 4*)
+(* Partie 4 *)
 
-  type arbre_deja_vus = ArbreVide | Noeud of bool * arbre_deja_vus * arbre_deja_vus
+type arbredejavus = 
+  |Empty 
+  |Nodedv of arbre_decision * arbredejavus * arbredejavus
 
-let rec compressionParArbre (g : arbre_decision) (arbre_deja_vus : arbre_deja_vus) =
-  match g with
-  | Leaf a ->
-    let lf = liste_feuilles g in
-    let n1 = composition lf in
-    (match chercherDansArbre n1 arbre_deja_vus with
-    | Some abr -> (abr, arbre_deja_vus)
-    | None ->
-      let nouveau = Leaf a in (nouveau, insererDansArbre n1 nouveau arbre_deja_vus))
-  | Node (n, left, right) ->
-    let (gauche, arbre_deja_vus1) = compressionParArbre left arbre_deja_vus in
-    let (droite, arbre_deja_vus2) = compressionParArbre right arbre_deja_vus1 in
-    let lf = liste_feuilles g in
-    let pg, pd = split lf in
-    if List.for_all (fun x -> x = false) pd then
-      (gauche, arbre_deja_vus1)
-    else
-      let n1 = composition lf in
-      match chercherDansArbre n1 arbre_deja_vus2 with
-      | Some abr -> (abr, arbre_deja_vus2)
-      | None ->
-        let nouveau = Node (n, gauche, droite) in (nouveau, insererDansArbre n1 nouveau arbre_deja_vus2)
-
-and chercherDansArbre n arbre =
-  (* Fonction pour chercher un nœud dans l'arbre de recherche *)
+let rec chercherDansArbre (arbre : arbredejavus)  tb =
   match arbre with
-  | ArbreVide -> None
-  | Noeud (v, gauche, droite) ->
-    if n = v then Some arbre
-    else if n < v then chercherDansArbre n gauche
-    else chercherDansArbre n droite
+  | Empty -> (false,Leaf(false))
+  | Nodedv (n, gauche, droite) ->
+    match tb with
+    |[] -> (true,n)
+    |b::queue -> 
+      if b then
+        chercherDansArbre droite queue
+      else 
+        chercherDansArbre gauche queue
 
-and insererDansArbre n abr arbre =
-  (* Fonction pour insérer un nœud dans l'arbre de recherche *)
+
+let rec insererDansArbre arbre  tb =
   match arbre with
-  | ArbreVide -> Noeud (n, ArbreVide, abr)
-  | Noeud (v, gauche, droite) ->
-    if n = v then arbre
-    else if n < v then Noeud (v, insererDansArbre n abr gauche, droite)
-    else Noeud (v, gauche, insererDansArbre n abr droite)
+  |Empty -> 
+    (match tb with
+    |[] -> arbre
+    |b :: queue ->
+      if (b) then 
+        Nodedv(cons_arbre tb,Empty ,insererDansArbre arbre queue)
+      else 
+        Nodedv(cons_arbre tb,insererDansArbre arbre queue,Empty))
+  |Nodedv (n, gauche, droite) ->
+    (match tb with
+    | [] -> arbre
+    |b::queue -> 
+      if b then
+        insererDansArbre droite queue
+      else 
+        insererDansArbre gauche queue)
+
+  let rec compressionParArbre (g : arbre_decision) (arbre_deja_vus : arbredejavus) =
+    match g with
+    | Leaf a -> 
+      let lf = liste_feuilles g in
+      let (b, ab) = chercherDansArbre arbre_deja_vus lf in 
+      Printf.printf "Mon booléen : %b\n" b;
+      if b then
+        (ab, arbre_deja_vus)
+      else 
+        let nouveau = Leaf a in (nouveau, insererDansArbre arbre_deja_vus lf)
+
+    | Node(n,left,right) ->
+      (*parcours suffixe de l'arbre*)
+      let (gauche, arbre_deja_vus1) = compressionParArbre left arbre_deja_vus in
+      let (droite, arbre_deja_vus2) = compressionParArbre right arbre_deja_vus1 in
+      (*calcul de la liste feuille associee a n*)
+      let lf = liste_feuilles g in
+      let pg,pd = split lf in
+      (*si il n'y a que des false a droite*)
+      if (List.for_all (fun x -> x = false) pd) then
+        (*on remplace le pointeur vers n par un pointeur vers left*)
+        (gauche, arbre_deja_vus1)
+      else
+        let (b,a) = chercherDansArbre arbre_deja_vus lf in 
+        if b then
+          (a,arbre_deja_vus)
+        else 
+          let nouveau = Node(n,gauche,droite) in (nouveau,(insererDansArbre arbre_deja_vus2 lf))
+  
+let test_tree, _ = compressionParArbre (cons_arbre (decomposition [25899L])) Empty 
+let _ = dot test_tree 
+(* Le code DOT a été généré, mais il doit être affiché manuellement. *)
+
