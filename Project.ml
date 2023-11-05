@@ -144,9 +144,8 @@ let arb = Node (1, Node (2, Leaf true, Leaf false), Node (2, Leaf false, Leaf tr
 (*fonction permettant la compression d'un arbre de decision*)
 let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
   match g with
-  | Leaf a -> 
-    let lf = liste_feuilles g in
-    let n1 = composition lf in
+  | Leaf a ->
+    let n1 = composition [a] in
     (match (List.find_opt (fun (x,_) -> x = n1) ldv) with
     | Some (_,abr) -> (abr,ldv)
     | None ->
@@ -203,70 +202,54 @@ let rec dot tree =
 
 (* Partie 4 *)
 
-type arbredejavus = 
-  |Empty 
-  |Nodedv of arbre_decision * arbredejavus * arbredejavus
+type arbreDejaVus =
+  | Empty
+  | Nodedv of bool * arbreDejaVus * arbreDejaVus * arbre_decision
 
-let rec chercherDansArbre (arbre : arbredejavus)  tb =
-  match arbre with
-  | Empty -> (false,Leaf(false))
-  | Nodedv (n, gauche, droite) ->
-    match tb with
-    |[] -> (true,n)
-    |b::queue -> 
-      if b then
-        chercherDansArbre droite queue
-      else 
-        chercherDansArbre gauche queue
-
-
-let rec insererDansArbre arbre  tb =
-  match arbre with
-  |Empty -> 
-    (match tb with
-    |[] -> arbre
-    |b :: queue ->
-      if (b) then 
-        Nodedv(cons_arbre tb,Empty ,insererDansArbre arbre queue)
-      else 
-        Nodedv(cons_arbre tb,insererDansArbre arbre queue,Empty))
-  |Nodedv (n, gauche, droite) ->
-    (match tb with
-    | [] -> arbre
-    |b::queue -> 
-      if b then
-        insererDansArbre droite queue
-      else 
-        insererDansArbre gauche queue)
-
-  let rec compressionParArbre (g : arbre_decision) (arbre_deja_vus : arbredejavus) =
+  let rec compressionParArbre (g : arbre_decision) (adv : arbreDejaVus) =
     match g with
     | Leaf a -> 
+      let n1 = composition [a] in
+      (match rechercheArbre n1 adv with
+      | Some abr -> (abr, adv)
+      | None ->
+        let nouveau = Leaf a in (nouveau, insertionArbre n1 nouveau adv))
+    | Node(n, left, right) ->
+      let (gauche, adv1) = compressionParArbre left adv in
+      let (droite, adv2) = compressionParArbre right adv1 in
       let lf = liste_feuilles g in
-      let (b, ab) = chercherDansArbre arbre_deja_vus lf in 
-      Printf.printf "Mon booléen : %b\n" b;
-      if b then
-        (ab, arbre_deja_vus)
-      else 
-        let nouveau = Leaf a in (nouveau, insererDansArbre arbre_deja_vus lf)
-
-    | Node(n,left,right) ->
-      (*parcours suffixe de l'arbre*)
-      let (gauche, arbre_deja_vus1) = compressionParArbre left arbre_deja_vus in
-      let (droite, arbre_deja_vus2) = compressionParArbre right arbre_deja_vus1 in
-      (*calcul de la liste feuille associee a n*)
-      let lf = liste_feuilles g in
-      let pg,pd = split lf in
-      (*si il n'y a que des false a droite*)
+      let pg, pd = split lf in
       if (List.for_all (fun x -> x = false) pd) then
-        (*on remplace le pointeur vers n par un pointeur vers left*)
-        (gauche, arbre_deja_vus1)
+        (gauche, adv1)
       else
-        let (b,a) = chercherDansArbre arbre_deja_vus lf in 
-        if b then
-          (a,arbre_deja_vus)
-        else 
-          let nouveau = Node(n,gauche,droite) in (nouveau,(insererDansArbre arbre_deja_vus2 lf))
+        let n1 = composition lf in
+        match rechercheArbre n1 adv2 with
+        | Some abr -> (abr, adv2)
+        | None ->
+          let nouveau = Node(n, gauche, droite) in
+          (nouveau, insertionArbre n1 nouveau adv2)
+  
+  (* Fonction auxiliaire pour la recherche d'un arbre decision dans l'historique arborescente *)
+  and rechercheArbre (n : grand_entier) (adv : arbreDejaVus) : arbre_decision option =
+    match adv with
+    | Empty -> None
+    | Nodedv(_, _, _, abr) when n = composition (liste_feuilles abr) -> Some abr (* On a trouvé l'arbre *)
+    | Nodedv(false, gauche, _, _) -> rechercheArbre n gauche (* On continue la recherche dans le sous-arbre gauche *)
+    | Nodedv(true, _, droite, _) -> rechercheArbre n droite (* On continue la recherche dans le sous-arbre droit *)
+  
+  (* Fonction auxiliaire pour l'ajout d'un arbre decision dans l'historique arborescente *)
+  and insertionArbre (n : grand_entier) (abr : arbre_decision) (adv : arbreDejaVus) : arbreDejaVus =
+    match adv with
+    | Empty ->
+                Nodedv(false, Empty, Empty, abr)
+    | Nodedv(false, gauche, droite, abr') when n < composition (liste_feuilles abr') -> (*si n est plus petit que composition*)
+                Nodedv(false, insertionArbre n abr gauche, droite, abr') (*on continue l'insertion a gauche*)
+    | Nodedv(false, gauche, droite, abr') -> (*si n est plus grand que composition*)
+                Nodedv(false, gauche, insertionArbre n abr droite, abr') (*on continue l'insertion a droite*)
+    | Nodedv(true, gauche, droite, abr') when n < composition (liste_feuilles abr') -> (*si n est plus petit que composition*)
+                Nodedv(true, insertionArbre n abr gauche, droite, abr') (*on continue l'insertion a gauche*)
+    | Nodedv(true, gauche, droite, abr') -> (*si n est plus grand que composition*)
+                Nodedv(true, gauche, insertionArbre n abr droite, abr') (*on continue l'insertion a droite*)
   
 let test_tree, _ = compressionParArbre (cons_arbre (decomposition [25899L])) Empty 
 let _ = dot test_tree 
