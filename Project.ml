@@ -208,28 +208,30 @@ type arbreDejaVus =
 
 (* Fonctions auxiliaires pour manipuler l'arbre de déjà vus *)
 
+(*Fonction qui recherche dans l'arbre deja vus un arbre decision*)
 let rec rechercheDansArbre (n : grand_entier) (adv : arbreDejaVus) : arbre_decision option =
   match adv with
   | Empty -> None
   | Nodedv (x, left, right) ->
     let lf = liste_feuilles (Option.get x) in 
-    let v = composition lf in
-    if n = v then x
-    else if n < v then rechercheDansArbre n left
-    else rechercheDansArbre n right
+    let v = composition lf in (*valeur de la racine de l'arbre*)
+    if n = v then x (*si la valeur de la racine est n alors on renvoie le pointeur vers l'arbre_decision stocke dans l'historique*)
+    else if n < v then rechercheDansArbre n left (*sinon si la valeur de la racine est plus grande que n on cherche dans le sous arbre gauche*)
+    else rechercheDansArbre n right (*sinon on cherche dans le sous arbre droit*)
 
+(*Fonction qui ajoute un arbre decision dans l'arbre deja vus*)
 let rec ajoutDansArbre (n : grand_entier) (abr : arbre_decision option) (adv : arbreDejaVus) : arbreDejaVus =
   match adv with
   | Empty -> Nodedv (abr, Empty, Empty)
   | Nodedv (x, left, right) ->
     let lf = Option.map liste_feuilles x in 
-    let v = Option.map composition lf in
+    let v = Option.map composition lf in (*valeur de la racine de l'arbre*)
     match v with
     | Some value ->
-      if n = value then Nodedv (abr, left, right)
-      else if n < value then Nodedv (x, ajoutDansArbre n abr left, right)
-      else Nodedv (x, left, ajoutDansArbre n abr right)
-    | None -> Empty
+      if n = value then Nodedv (abr, left, right) (*si la valeur de la racine est n alors on remplace le pointeur vers l'arbre_decision stocke dans l'historique par abr*)
+      else if n < value then Nodedv (x, ajoutDansArbre n abr left, right) (*sinon si la valeur de la racine est plus grande que n on continue l'ajout a gauche*)
+      else Nodedv (x, left, ajoutDansArbre n abr right) (*sinon on continue l'ajout a droite*)
+    | None -> Empty (*si la valeur de la racine est None alors on renvoie Empty*)
 
 let rec compressionParArbre (g : arbre_decision) (adv : arbreDejaVus) =
   match g with
