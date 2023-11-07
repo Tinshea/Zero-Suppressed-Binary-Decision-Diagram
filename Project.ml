@@ -5,7 +5,7 @@ type grand_entier = int64 list
 
 (* Fonction pour insérer un entier 64 bits en queue de liste *)
 let inserer_entier n liste =
-  liste :: n
+  liste @ [n]
 
 (* Fonction pour récupérer la tête de la liste *)
 let tete_liste liste =
@@ -261,3 +261,42 @@ let test_tree, _ = compressionParArbre (cons_arbre (decomposition [25899L])) Emp
 let _ = dot test_tree 
 (* Le code DOT a été généré, mais il doit être affiché manuellement. *)
 
+(*Partie 6*)
+let rec countnode tree =
+  let visited_nodes = Hashtbl.create 100 in (* Utiliser un dictionnaire pour suivre les nœuds visités *)
+  let counter = ref 0 in 
+  
+  let rec aux parent = 
+    match parent with 
+    | Leaf a -> ()
+    | Node (n, left, right) ->
+      if not (Hashtbl.mem visited_nodes (Obj.magic parent)) then begin
+        Hashtbl.add visited_nodes (Obj.magic parent) (); (* Marquer le nœud comme visité *)
+        counter := !counter + 1; (* Incrémenter le compteur *)
+      end;
+      aux left;
+      aux right;
+  in
+  
+  aux tree;  
+   !counter;;
+
+  
+   let  analyse k =
+    let oc = open_out "data.txt" in
+    let rec aux (k:int) =
+    if k = 0 then
+      close_out oc
+    else
+      let nb = gen_alea k in 
+      let arbre = cons_arbre (decomposition (nb)) in
+      let node_countbefore = countnode arbre in 
+      let test_tree, _ = compressionParArbre (arbre) Empty in
+      let node_count = countnode test_tree in
+      fprintf oc "Number of nodes before: %d, Number of nodes After: %d, bits: %d\n" node_countbefore node_count k;
+      aux (k-1)
+    in
+    aux k;;
+    
+  
+analyse 1000
