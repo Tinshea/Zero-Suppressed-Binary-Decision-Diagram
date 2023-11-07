@@ -5,7 +5,7 @@ type grand_entier = int64 list
 
 (* Fonction pour insérer un entier 64 bits en tete de liste *)
 let inserer_entier n liste =
-  n :: liste
+  liste :: n
 
 (* Fonction pour récupérer la tête de la liste *)
 let tete_liste liste =
