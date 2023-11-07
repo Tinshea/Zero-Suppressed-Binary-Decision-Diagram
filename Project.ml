@@ -3,7 +3,7 @@
 (* Définition d'une structure de liste pour représenter un entier 64 bits *)
 type grand_entier = int64 list
 
-(* Fonction pour insérer un entier 64 bits en tete de liste *)
+(* Fonction pour insérer un entier 64 bits en queue de liste *)
 let inserer_entier n liste =
   liste :: n
 
