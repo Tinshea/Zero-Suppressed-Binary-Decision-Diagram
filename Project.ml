@@ -276,12 +276,11 @@ let rec countnode tree =
   aux tree;  
    !counter;;
 
-   open Unix
 
    let analyse_time k =
      let oc = open_out "datatime.txt" in
      let ac = open_out "datanodewithoutcompression.txt" in
-     let ac = open_out "datanodecompression.txt" in
+     let ec = open_out "datanodecompression.txt" in
    
      let rec aux k =
        if k = 0 then (
@@ -292,9 +291,9 @@ let rec countnode tree =
          let nb = gen_alea k in
          let   arbre = cons_arbre (decomposition nb) in
          let node_countbefore = countnode arbre in
-         let start = Unix.gettimeofday () in
+         let start = Sys.time() in
          let test_tree, _ = compressionParArbre arbre Empty in
-         let stop = Unix.gettimeofday () in
+         let stop = Sys.time() in
          let node_count = countnode test_tree in
          fprintf oc "Itération %d, time: %fs\n" k (stop -. start);
          fprintf ac "Itération %d, nodeeco: %ds\n" k node_countbefore;
@@ -305,4 +304,4 @@ let rec countnode tree =
      aux k ;;
    
   
-analyse 900
+     analyse_time 900
