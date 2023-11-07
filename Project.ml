@@ -263,19 +263,14 @@ let _ = dot test_tree
 
 (*Partie 6*)
 let rec countnode tree =
-  let visited_nodes = Hashtbl.create 100 in (* Utiliser un dictionnaire pour suivre les nœuds visités *)
   let counter = ref 0 in 
-  
   let rec aux parent = 
     match parent with 
     | Leaf a -> ()
     | Node (n, left, right) ->
-      if not (Hashtbl.mem visited_nodes (Obj.magic parent)) then begin
-        Hashtbl.add visited_nodes (Obj.magic parent) (); (* Marquer le nœud comme visité *)
-        counter := !counter + 1; (* Incrémenter le compteur *)
-      end;
+        counter := !counter + 1; 
       aux left;
-      aux right;
+      aux right;  
   in
   
   aux tree;  
