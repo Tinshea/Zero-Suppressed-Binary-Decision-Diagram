@@ -121,7 +121,7 @@ type arbre_decision =
 
   let rec cons_arbre t =
     let length_t = List.length t in
-    if not (estPowde2 length_t) then cons_arbre (completion t (length_t + 1)) else let n = t in
+    if not (estPowde2 (length_t-1)) then cons_arbre (completion t (length_t + 1)) else let n = t in
     
     (* Fonction auxiliaire pour construire l'arbre de décision *)
     let rec aux depth lst = 
@@ -185,10 +185,9 @@ open Printf
 let rec dot tree =
   let oc = open_out "monfichier.dot" in
   fprintf oc "digraph  {\n";
-  
-  (* Initialisation des tables de hachage pour les liens gauche et droite *)
-  let deja_vus_gauche = Hashtbl.create 10 in
-  let deja_vus_droite = Hashtbl.create 10 in
+
+  (* Initialisation de la table de hachage pour les liens déjà visités *)
+  let deja_vus = Hashtbl.create 10 in
 
   let rec aux parent =
     match parent with 
@@ -202,20 +201,18 @@ let rec dot tree =
         let left_node_id = Obj.magic left in
         let right_node_id = Obj.magic right in
 
-        (* Vérification et ajout dans la table de hachage pour left *)
-        if not (Hashtbl.mem deja_vus_gauche (Obj.magic parent, left_node_id)) then begin
-          fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) left_node_id;
-          Hashtbl.add deja_vus_gauche (Obj.magic parent, left_node_id) true;
-          aux left;
-        end;
+        (* Ajout des liens gauche et droit *)
+        fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) left_node_id;
+        Hashtbl.add deja_vus (Obj.magic parent, left_node_id) true;
+        aux left;
 
-        (* Vérification et ajout dans la table de hachage pour right *)
-        if right_node_id <> 0 && not (Hashtbl.mem deja_vus_droite (Obj.magic parent, right_node_id)) then begin
+        if right_node_id <> 0 then begin
           fprintf oc "  %d -> %d  \n" (Obj.magic parent) right_node_id;
-          Hashtbl.add deja_vus_droite (Obj.magic parent, right_node_id) true;
+          Hashtbl.add deja_vus (Obj.magic parent, right_node_id) true;
           aux right;
         end;
   in
+
   aux tree;
   fprintf oc "}\n";
   close_out oc;
@@ -223,7 +220,7 @@ let rec dot tree =
   
 (*let tree = cons_arbre (decomposition [25899L]) in dot tree *)
 let (o,n) = compressionParListe (cons_arbre (decomposition [25899L])) [] in  
-dot o 
+dot o
 
 (* Partie 4 *)
 
@@ -280,11 +277,6 @@ let rec compressionParArbre (g : arbre_decision) (adv : arbreDejaVus) =
       | None -> 
         let nouveau = Node(n, gauche, droite) in
         (nouveau, ajoutDansArbre n1 (Some nouveau) adv2)
-
-  
-let test_tree, _ = compressionParArbre (cons_arbre (decomposition [25899L])) Empty
-let _ = dot test_tree 
-(* Le code DOT a été généré, mais il doit être affiché manuellement. *)
 
 (*Partie 6*)
 let rec countnode tree =
