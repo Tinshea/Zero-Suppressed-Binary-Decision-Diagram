@@ -1,900 +1,900 @@
-Itération 900, time: 0.011803s
-Itération 899, time: 0.012547s
-Itération 898, time: 0.011980s
-Itération 897, time: 0.011904s
-Itération 896, time: 0.012612s
-Itération 895, time: 0.011558s
-Itération 894, time: 0.011537s
-Itération 893, time: 0.012505s
-Itération 892, time: 0.012390s
-Itération 891, time: 0.012151s
-Itération 890, time: 0.011863s
-Itération 889, time: 0.012649s
-Itération 888, time: 0.012207s
-Itération 887, time: 0.011552s
-Itération 886, time: 0.013060s
-Itération 885, time: 0.012263s
-Itération 884, time: 0.012766s
-Itération 883, time: 0.011573s
-Itération 882, time: 0.011877s
-Itération 881, time: 0.012621s
-Itération 880, time: 0.011315s
-Itération 879, time: 0.011703s
-Itération 878, time: 0.011410s
-Itération 877, time: 0.011871s
-Itération 876, time: 0.012286s
-Itération 875, time: 0.011268s
-Itération 874, time: 0.012530s
-Itération 873, time: 0.012320s
-Itération 872, time: 0.010949s
-Itération 871, time: 0.011632s
-Itération 870, time: 0.012024s
-Itération 869, time: 0.012396s
-Itération 868, time: 0.013438s
-Itération 867, time: 0.011852s
-Itération 866, time: 0.010514s
-Itération 865, time: 0.011612s
-Itération 864, time: 0.012772s
-Itération 863, time: 0.011571s
-Itération 862, time: 0.011326s
-Itération 861, time: 0.011165s
-Itération 860, time: 0.010284s
-Itération 859, time: 0.011288s
-Itération 858, time: 0.011481s
-Itération 857, time: 0.011087s
-Itération 856, time: 0.010307s
-Itération 855, time: 0.011895s
-Itération 854, time: 0.011617s
-Itération 853, time: 0.012221s
-Itération 852, time: 0.011094s
-Itération 851, time: 0.011158s
-Itération 850, time: 0.010826s
-Itération 849, time: 0.011644s
-Itération 848, time: 0.010829s
-Itération 847, time: 0.010685s
-Itération 846, time: 0.011225s
-Itération 845, time: 0.011701s
-Itération 844, time: 0.011097s
-Itération 843, time: 0.010721s
-Itération 842, time: 0.011588s
-Itération 841, time: 0.011247s
-Itération 840, time: 0.011849s
-Itération 839, time: 0.011386s
-Itération 838, time: 0.011082s
-Itération 837, time: 0.010937s
-Itération 836, time: 0.011112s
-Itération 835, time: 0.011736s
-Itération 834, time: 0.010984s
-Itération 833, time: 0.011392s
-Itération 832, time: 0.011237s
-Itération 831, time: 0.010116s
-Itération 830, time: 0.011164s
-Itération 829, time: 0.011223s
-Itération 828, time: 0.011213s
-Itération 827, time: 0.011205s
-Itération 826, time: 0.010457s
-Itération 825, time: 0.010200s
-Itération 824, time: 0.011139s
-Itération 823, time: 0.010244s
-Itération 822, time: 0.010239s
-Itération 821, time: 0.011860s
-Itération 820, time: 0.011449s
-Itération 819, time: 0.010690s
-Itération 818, time: 0.010568s
-Itération 817, time: 0.010539s
-Itération 816, time: 0.011095s
-Itération 815, time: 0.010562s
-Itération 814, time: 0.010561s
-Itération 813, time: 0.011165s
-Itération 812, time: 0.011279s
-Itération 811, time: 0.011360s
-Itération 810, time: 0.010897s
-Itération 809, time: 0.010355s
-Itération 808, time: 0.010749s
-Itération 807, time: 0.012250s
-Itération 806, time: 0.010785s
-Itération 805, time: 0.011176s
-Itération 804, time: 0.011371s
-Itération 803, time: 0.010336s
-Itération 802, time: 0.010221s
-Itération 801, time: 0.010449s
-Itération 800, time: 0.010605s
-Itération 799, time: 0.010821s
-Itération 798, time: 0.011237s
-Itération 797, time: 0.010967s
-Itération 796, time: 0.011205s
-Itération 795, time: 0.010831s
-Itération 794, time: 0.010369s
-Itération 793, time: 0.011530s
-Itération 792, time: 0.009951s
-Itération 791, time: 0.009592s
-Itération 790, time: 0.009995s
-Itération 789, time: 0.010417s
-Itération 788, time: 0.009849s
-Itération 787, time: 0.009573s
-Itération 786, time: 0.010445s
-Itération 785, time: 0.009474s
-Itération 784, time: 0.009379s
-Itération 783, time: 0.010024s
-Itération 782, time: 0.010601s
-Itération 781, time: 0.010409s
-Itération 780, time: 0.009263s
-Itération 779, time: 0.010442s
-Itération 778, time: 0.009768s
-Itération 777, time: 0.010648s
-Itération 776, time: 0.009563s
-Itération 775, time: 0.010701s
-Itération 774, time: 0.010592s
-Itération 773, time: 0.010108s
-Itération 772, time: 0.008846s
-Itération 771, time: 0.010032s
-Itération 770, time: 0.010471s
-Itération 769, time: 0.009998s
-Itération 768, time: 0.010290s
-Itération 767, time: 0.009684s
-Itération 766, time: 0.010413s
-Itération 765, time: 0.010183s
-Itération 764, time: 0.009972s
-Itération 763, time: 0.009157s
-Itération 762, time: 0.009422s
-Itération 761, time: 0.009115s
-Itération 760, time: 0.010025s
-Itération 759, time: 0.009026s
-Itération 758, time: 0.009438s
-Itération 757, time: 0.008803s
-Itération 756, time: 0.009697s
-Itération 755, time: 0.010044s
-Itération 754, time: 0.010229s
-Itération 753, time: 0.009113s
-Itération 752, time: 0.008684s
-Itération 751, time: 0.009534s
-Itération 750, time: 0.009926s
-Itération 749, time: 0.009213s
-Itération 748, time: 0.009157s
-Itération 747, time: 0.008982s
-Itération 746, time: 0.009583s
-Itération 745, time: 0.009483s
-Itération 744, time: 0.008340s
-Itération 743, time: 0.009637s
-Itération 742, time: 0.008590s
-Itération 741, time: 0.008263s
-Itération 740, time: 0.009846s
-Itération 739, time: 0.009911s
-Itération 738, time: 0.009217s
-Itération 737, time: 0.009443s
-Itération 736, time: 0.009114s
-Itération 735, time: 0.009502s
-Itération 734, time: 0.009230s
-Itération 733, time: 0.008647s
-Itération 732, time: 0.008507s
-Itération 731, time: 0.010381s
-Itération 730, time: 0.009666s
-Itération 729, time: 0.008162s
-Itération 728, time: 0.008874s
-Itération 727, time: 0.009059s
-Itération 726, time: 0.008413s
-Itération 725, time: 0.009645s
-Itération 724, time: 0.008434s
-Itération 723, time: 0.008945s
-Itération 722, time: 0.009427s
-Itération 721, time: 0.008560s
-Itération 720, time: 0.008143s
-Itération 719, time: 0.007884s
-Itération 718, time: 0.009454s
-Itération 717, time: 0.009301s
-Itération 716, time: 0.008316s
-Itération 715, time: 0.009175s
-Itération 714, time: 0.008773s
-Itération 713, time: 0.008355s
-Itération 712, time: 0.009209s
-Itération 711, time: 0.008065s
-Itération 710, time: 0.008518s
-Itération 709, time: 0.007796s
-Itération 708, time: 0.008980s
-Itération 707, time: 0.008382s
-Itération 706, time: 0.008082s
-Itération 705, time: 0.008857s
-Itération 704, time: 0.008736s
-Itération 703, time: 0.008519s
-Itération 702, time: 0.008258s
-Itération 701, time: 0.008479s
-Itération 700, time: 0.007918s
-Itération 699, time: 0.008698s
-Itération 698, time: 0.008056s
-Itération 697, time: 0.008713s
-Itération 696, time: 0.008710s
-Itération 695, time: 0.008414s
-Itération 694, time: 0.009007s
-Itération 693, time: 0.008489s
-Itération 692, time: 0.008430s
-Itération 691, time: 0.007896s
-Itération 690, time: 0.008604s
-Itération 689, time: 0.008335s
-Itération 688, time: 0.008827s
-Itération 687, time: 0.008442s
-Itération 686, time: 0.008642s
-Itération 685, time: 0.008074s
-Itération 684, time: 0.008308s
-Itération 683, time: 0.008139s
-Itération 682, time: 0.008389s
-Itération 681, time: 0.007435s
-Itération 680, time: 0.008093s
-Itération 679, time: 0.008107s
-Itération 678, time: 0.009096s
-Itération 677, time: 0.008716s
-Itération 676, time: 0.008648s
-Itération 675, time: 0.008175s
-Itération 674, time: 0.008211s
-Itération 673, time: 0.007357s
-Itération 672, time: 0.007804s
-Itération 671, time: 0.008446s
-Itération 670, time: 0.008441s
-Itération 669, time: 0.008116s
-Itération 668, time: 0.009080s
-Itération 667, time: 0.007836s
-Itération 666, time: 0.008136s
-Itération 665, time: 0.008551s
-Itération 664, time: 0.007727s
-Itération 663, time: 0.008716s
-Itération 662, time: 0.007713s
-Itération 661, time: 0.007725s
-Itération 660, time: 0.007260s
-Itération 659, time: 0.008520s
-Itération 658, time: 0.007570s
-Itération 657, time: 0.008441s
-Itération 656, time: 0.007992s
-Itération 655, time: 0.008604s
-Itération 654, time: 0.007956s
-Itération 653, time: 0.007670s
-Itération 652, time: 0.007909s
-Itération 651, time: 0.007899s
-Itération 650, time: 0.007921s
-Itération 649, time: 0.007608s
-Itération 648, time: 0.008086s
-Itération 647, time: 0.008796s
-Itération 646, time: 0.007719s
-Itération 645, time: 0.007506s
-Itération 644, time: 0.008310s
-Itération 643, time: 0.007851s
-Itération 642, time: 0.007820s
-Itération 641, time: 0.008399s
-Itération 640, time: 0.008128s
-Itération 639, time: 0.008270s
-Itération 638, time: 0.007300s
-Itération 637, time: 0.007554s
-Itération 636, time: 0.007498s
-Itération 635, time: 0.007129s
-Itération 634, time: 0.007658s
-Itération 633, time: 0.006830s
-Itération 632, time: 0.007490s
-Itération 631, time: 0.007287s
-Itération 630, time: 0.007497s
-Itération 629, time: 0.007670s
-Itération 628, time: 0.007341s
-Itération 627, time: 0.007570s
-Itération 626, time: 0.007155s
-Itération 625, time: 0.007060s
-Itération 624, time: 0.007206s
-Itération 623, time: 0.007300s
-Itération 622, time: 0.006995s
-Itération 621, time: 0.007295s
-Itération 620, time: 0.007699s
-Itération 619, time: 0.007769s
-Itération 618, time: 0.007343s
-Itération 617, time: 0.006629s
-Itération 616, time: 0.007193s
-Itération 615, time: 0.006610s
-Itération 614, time: 0.007013s
-Itération 613, time: 0.007355s
-Itération 612, time: 0.007414s
-Itération 611, time: 0.007382s
-Itération 610, time: 0.007542s
-Itération 609, time: 0.007371s
-Itération 608, time: 0.007063s
-Itération 607, time: 0.007270s
-Itération 606, time: 0.007249s
-Itération 605, time: 0.007386s
-Itération 604, time: 0.007233s
-Itération 603, time: 0.007204s
-Itération 602, time: 0.006717s
-Itération 601, time: 0.006946s
-Itération 600, time: 0.007073s
-Itération 599, time: 0.006473s
-Itération 598, time: 0.007336s
-Itération 597, time: 0.007161s
-Itération 596, time: 0.007266s
-Itération 595, time: 0.007291s
-Itération 594, time: 0.006605s
-Itération 593, time: 0.007542s
-Itération 592, time: 0.006512s
-Itération 591, time: 0.006534s
-Itération 590, time: 0.007027s
-Itération 589, time: 0.006354s
-Itération 588, time: 0.007400s
-Itération 587, time: 0.006842s
-Itération 586, time: 0.007428s
-Itération 585, time: 0.006867s
-Itération 584, time: 0.007119s
-Itération 583, time: 0.007223s
-Itération 582, time: 0.006322s
-Itération 581, time: 0.007033s
-Itération 580, time: 0.006394s
-Itération 579, time: 0.006295s
-Itération 578, time: 0.006604s
-Itération 577, time: 0.006424s
-Itération 576, time: 0.006796s
-Itération 575, time: 0.006828s
-Itération 574, time: 0.006049s
-Itération 573, time: 0.006674s
-Itération 572, time: 0.006361s
-Itération 571, time: 0.006818s
-Itération 570, time: 0.006574s
-Itération 569, time: 0.006282s
-Itération 568, time: 0.006061s
-Itération 567, time: 0.006673s
-Itération 566, time: 0.007404s
-Itération 565, time: 0.006161s
-Itération 564, time: 0.006377s
-Itération 563, time: 0.006138s
-Itération 562, time: 0.006004s
-Itération 561, time: 0.006538s
-Itération 560, time: 0.006426s
-Itération 559, time: 0.005938s
-Itération 558, time: 0.006484s
-Itération 557, time: 0.005830s
-Itération 556, time: 0.006478s
-Itération 555, time: 0.006074s
-Itération 554, time: 0.006666s
-Itération 553, time: 0.006804s
-Itération 552, time: 0.006145s
-Itération 551, time: 0.005881s
-Itération 550, time: 0.006086s
-Itération 549, time: 0.006118s
-Itération 548, time: 0.006373s
-Itération 547, time: 0.006120s
-Itération 546, time: 0.006452s
-Itération 545, time: 0.006620s
-Itération 544, time: 0.005988s
-Itération 543, time: 0.006180s
-Itération 542, time: 0.006384s
-Itération 541, time: 0.006353s
-Itération 540, time: 0.005971s
-Itération 539, time: 0.005851s
-Itération 538, time: 0.005848s
-Itération 537, time: 0.006699s
-Itération 536, time: 0.007245s
-Itération 535, time: 0.006313s
-Itération 534, time: 0.005940s
-Itération 533, time: 0.006057s
-Itération 532, time: 0.006621s
-Itération 531, time: 0.006093s
-Itération 530, time: 0.006625s
-Itération 529, time: 0.006028s
-Itération 528, time: 0.005740s
-Itération 527, time: 0.005975s
-Itération 526, time: 0.006488s
-Itération 525, time: 0.006018s
-Itération 524, time: 0.006165s
-Itération 523, time: 0.006037s
-Itération 522, time: 0.005633s
-Itération 521, time: 0.005688s
-Itération 520, time: 0.005818s
-Itération 519, time: 0.006115s
-Itération 518, time: 0.005994s
-Itération 517, time: 0.006259s
-Itération 516, time: 0.006288s
-Itération 515, time: 0.005937s
-Itération 514, time: 0.005934s
-Itération 513, time: 0.005295s
-Itération 512, time: 0.005054s
-Itération 511, time: 0.004792s
-Itération 510, time: 0.004173s
-Itération 509, time: 0.005363s
-Itération 508, time: 0.004343s
-Itération 507, time: 0.004538s
-Itération 506, time: 0.004905s
-Itération 505, time: 0.004586s
-Itération 504, time: 0.004989s
-Itération 503, time: 0.004589s
-Itération 502, time: 0.004178s
-Itération 501, time: 0.004798s
-Itération 500, time: 0.004377s
-Itération 499, time: 0.004445s
-Itération 498, time: 0.004108s
-Itération 497, time: 0.004431s
-Itération 496, time: 0.004082s
-Itération 495, time: 0.004640s
-Itération 494, time: 0.004680s
-Itération 493, time: 0.004076s
-Itération 492, time: 0.004960s
-Itération 491, time: 0.004633s
-Itération 490, time: 0.004487s
-Itération 489, time: 0.004878s
-Itération 488, time: 0.005054s
-Itération 487, time: 0.004270s
-Itération 486, time: 0.004920s
-Itération 485, time: 0.004133s
-Itération 484, time: 0.004583s
-Itération 483, time: 0.004895s
-Itération 482, time: 0.004560s
-Itération 481, time: 0.004747s
-Itération 480, time: 0.004666s
-Itération 479, time: 0.004489s
-Itération 478, time: 0.004721s
-Itération 477, time: 0.004553s
-Itération 476, time: 0.004023s
-Itération 475, time: 0.004506s
-Itération 474, time: 0.004441s
-Itération 473, time: 0.003690s
-Itération 472, time: 0.004494s
-Itération 471, time: 0.004748s
-Itération 470, time: 0.004491s
-Itération 469, time: 0.004569s
-Itération 468, time: 0.004134s
-Itération 467, time: 0.004112s
-Itération 466, time: 0.003819s
-Itération 465, time: 0.004069s
-Itération 464, time: 0.004060s
-Itération 463, time: 0.004042s
-Itération 462, time: 0.004454s
-Itération 461, time: 0.003955s
-Itération 460, time: 0.004333s
-Itération 459, time: 0.004224s
-Itération 458, time: 0.003661s
-Itération 457, time: 0.003929s
-Itération 456, time: 0.003984s
-Itération 455, time: 0.004295s
-Itération 454, time: 0.004074s
-Itération 453, time: 0.003888s
-Itération 452, time: 0.004151s
-Itération 451, time: 0.004092s
-Itération 450, time: 0.004674s
-Itération 449, time: 0.004169s
-Itération 448, time: 0.003732s
-Itération 447, time: 0.003650s
-Itération 446, time: 0.003919s
-Itération 445, time: 0.004229s
-Itération 444, time: 0.003622s
-Itération 443, time: 0.004119s
-Itération 442, time: 0.003899s
-Itération 441, time: 0.003710s
-Itération 440, time: 0.003969s
-Itération 439, time: 0.004056s
-Itération 438, time: 0.004260s
-Itération 437, time: 0.003975s
-Itération 436, time: 0.004158s
-Itération 435, time: 0.004084s
-Itération 434, time: 0.003997s
-Itération 433, time: 0.003719s
-Itération 432, time: 0.004281s
-Itération 431, time: 0.003772s
-Itération 430, time: 0.004127s
-Itération 429, time: 0.004458s
-Itération 428, time: 0.004265s
-Itération 427, time: 0.004194s
-Itération 426, time: 0.003645s
-Itération 425, time: 0.003901s
-Itération 424, time: 0.004006s
-Itération 423, time: 0.003694s
-Itération 422, time: 0.003549s
-Itération 421, time: 0.003922s
-Itération 420, time: 0.003919s
-Itération 419, time: 0.003543s
-Itération 418, time: 0.003519s
-Itération 417, time: 0.003607s
-Itération 416, time: 0.003696s
-Itération 415, time: 0.003291s
-Itération 414, time: 0.003420s
-Itération 413, time: 0.003523s
-Itération 412, time: 0.003782s
-Itération 411, time: 0.003748s
-Itération 410, time: 0.004030s
-Itération 409, time: 0.003457s
-Itération 408, time: 0.003717s
-Itération 407, time: 0.003374s
-Itération 406, time: 0.003120s
-Itération 405, time: 0.003634s
-Itération 404, time: 0.003580s
-Itération 403, time: 0.003270s
-Itération 402, time: 0.003679s
-Itération 401, time: 0.003350s
-Itération 400, time: 0.003560s
-Itération 399, time: 0.003438s
-Itération 398, time: 0.003447s
-Itération 397, time: 0.003485s
-Itération 396, time: 0.003531s
-Itération 395, time: 0.003359s
-Itération 394, time: 0.003653s
-Itération 393, time: 0.003485s
-Itération 392, time: 0.003404s
-Itération 391, time: 0.003237s
-Itération 390, time: 0.003434s
-Itération 389, time: 0.003259s
-Itération 388, time: 0.003070s
-Itération 387, time: 0.003294s
-Itération 386, time: 0.003259s
-Itération 385, time: 0.003447s
-Itération 384, time: 0.003100s
-Itération 383, time: 0.003690s
-Itération 382, time: 0.003326s
-Itération 381, time: 0.003322s
-Itération 380, time: 0.003354s
-Itération 379, time: 0.003024s
-Itération 378, time: 0.003212s
-Itération 377, time: 0.003210s
-Itération 376, time: 0.003275s
-Itération 375, time: 0.003343s
-Itération 374, time: 0.002845s
-Itération 373, time: 0.003233s
-Itération 372, time: 0.003105s
-Itération 371, time: 0.003146s
-Itération 370, time: 0.003024s
-Itération 369, time: 0.003286s
-Itération 368, time: 0.003521s
-Itération 367, time: 0.003148s
-Itération 366, time: 0.003116s
-Itération 365, time: 0.003094s
-Itération 364, time: 0.002946s
-Itération 363, time: 0.003061s
-Itération 362, time: 0.002971s
-Itération 361, time: 0.003065s
-Itération 360, time: 0.003346s
-Itération 359, time: 0.003034s
-Itération 358, time: 0.002708s
-Itération 357, time: 0.002856s
-Itération 356, time: 0.003434s
-Itération 355, time: 0.003051s
-Itération 354, time: 0.002898s
-Itération 353, time: 0.003032s
-Itération 352, time: 0.003127s
-Itération 351, time: 0.002882s
-Itération 350, time: 0.002864s
-Itération 349, time: 0.003009s
-Itération 348, time: 0.002827s
-Itération 347, time: 0.002800s
-Itération 346, time: 0.002690s
-Itération 345, time: 0.002910s
-Itération 344, time: 0.002600s
-Itération 343, time: 0.002984s
-Itération 342, time: 0.003079s
-Itération 341, time: 0.002797s
-Itération 340, time: 0.002692s
-Itération 339, time: 0.003135s
-Itération 338, time: 0.002893s
-Itération 337, time: 0.002785s
-Itération 336, time: 0.003025s
-Itération 335, time: 0.002659s
-Itération 334, time: 0.002829s
-Itération 333, time: 0.002899s
-Itération 332, time: 0.002832s
-Itération 331, time: 0.002848s
-Itération 330, time: 0.002788s
-Itération 329, time: 0.002631s
-Itération 328, time: 0.002693s
-Itération 327, time: 0.002595s
-Itération 326, time: 0.002768s
-Itération 325, time: 0.002763s
-Itération 324, time: 0.002646s
-Itération 323, time: 0.002619s
-Itération 322, time: 0.002589s
-Itération 321, time: 0.002813s
-Itération 320, time: 0.002862s
-Itération 319, time: 0.002667s
-Itération 318, time: 0.002444s
-Itération 317, time: 0.002472s
-Itération 316, time: 0.002785s
-Itération 315, time: 0.002581s
-Itération 314, time: 0.002666s
-Itération 313, time: 0.002373s
-Itération 312, time: 0.002519s
-Itération 311, time: 0.002425s
-Itération 310, time: 0.002575s
-Itération 309, time: 0.002506s
-Itération 308, time: 0.002597s
-Itération 307, time: 0.002631s
-Itération 306, time: 0.002392s
-Itération 305, time: 0.002691s
-Itération 304, time: 0.002757s
-Itération 303, time: 0.002609s
-Itération 302, time: 0.002443s
-Itération 301, time: 0.002467s
-Itération 300, time: 0.002665s
-Itération 299, time: 0.002397s
-Itération 298, time: 0.002597s
-Itération 297, time: 0.002316s
-Itération 296, time: 0.002651s
-Itération 295, time: 0.002495s
-Itération 294, time: 0.002365s
-Itération 293, time: 0.002242s
-Itération 292, time: 0.002641s
-Itération 291, time: 0.002671s
-Itération 290, time: 0.002716s
-Itération 289, time: 0.002398s
-Itération 288, time: 0.002198s
-Itération 287, time: 0.002527s
-Itération 286, time: 0.002332s
-Itération 285, time: 0.002463s
-Itération 284, time: 0.002277s
-Itération 283, time: 0.002308s
-Itération 282, time: 0.002284s
-Itération 281, time: 0.002075s
-Itération 280, time: 0.002282s
-Itération 279, time: 0.002251s
-Itération 278, time: 0.002142s
-Itération 277, time: 0.002142s
-Itération 276, time: 0.002168s
-Itération 275, time: 0.002141s
-Itération 274, time: 0.002209s
-Itération 273, time: 0.002363s
-Itération 272, time: 0.002305s
-Itération 271, time: 0.002252s
-Itération 270, time: 0.002088s
-Itération 269, time: 0.001917s
-Itération 268, time: 0.002154s
-Itération 267, time: 0.002247s
-Itération 266, time: 0.002069s
-Itération 265, time: 0.002269s
-Itération 264, time: 0.002132s
-Itération 263, time: 0.002000s
-Itération 262, time: 0.002000s
-Itération 261, time: 0.002289s
-Itération 260, time: 0.002334s
-Itération 259, time: 0.002060s
-Itération 258, time: 0.001607s
-Itération 257, time: 0.002180s
-Itération 256, time: 0.001849s
-Itération 255, time: 0.001559s
-Itération 254, time: 0.001447s
-Itération 253, time: 0.001446s
-Itération 252, time: 0.001619s
-Itération 251, time: 0.001711s
-Itération 250, time: 0.001440s
-Itération 249, time: 0.001562s
-Itération 248, time: 0.001755s
-Itération 247, time: 0.001440s
-Itération 246, time: 0.001686s
-Itération 245, time: 0.001528s
-Itération 244, time: 0.001618s
-Itération 243, time: 0.001709s
-Itération 242, time: 0.001510s
-Itération 241, time: 0.001652s
-Itération 240, time: 0.001577s
-Itération 239, time: 0.001380s
-Itération 238, time: 0.001496s
-Itération 237, time: 0.001574s
-Itération 236, time: 0.001629s
-Itération 235, time: 0.001469s
-Itération 234, time: 0.001619s
-Itération 233, time: 0.001617s
-Itération 232, time: 0.001702s
-Itération 231, time: 0.001539s
-Itération 230, time: 0.001383s
-Itération 229, time: 0.001595s
-Itération 228, time: 0.001453s
-Itération 227, time: 0.001284s
-Itération 226, time: 0.001404s
-Itération 225, time: 0.001413s
-Itération 224, time: 0.001469s
-Itération 223, time: 0.001526s
-Itération 222, time: 0.001399s
-Itération 221, time: 0.001653s
-Itération 220, time: 0.001288s
-Itération 219, time: 0.001415s
-Itération 218, time: 0.001507s
-Itération 217, time: 0.001472s
-Itération 216, time: 0.001586s
-Itération 215, time: 0.001388s
-Itération 214, time: 0.001480s
-Itération 213, time: 0.001354s
-Itération 212, time: 0.001548s
-Itération 211, time: 0.001396s
-Itération 210, time: 0.001297s
-Itération 209, time: 0.001436s
-Itération 208, time: 0.001410s
-Itération 207, time: 0.001380s
-Itération 206, time: 0.001412s
-Itération 205, time: 0.001355s
-Itération 204, time: 0.001364s
-Itération 203, time: 0.001217s
-Itération 202, time: 0.001218s
-Itération 201, time: 0.001291s
-Itération 200, time: 0.001247s
-Itération 199, time: 0.001158s
-Itération 198, time: 0.001363s
-Itération 197, time: 0.001279s
-Itération 196, time: 0.001206s
-Itération 195, time: 0.001198s
-Itération 194, time: 0.001159s
-Itération 193, time: 0.001302s
-Itération 192, time: 0.001108s
-Itération 191, time: 0.001186s
-Itération 190, time: 0.001217s
-Itération 189, time: 0.001351s
-Itération 188, time: 0.001268s
-Itération 187, time: 0.001116s
-Itération 186, time: 0.001179s
-Itération 185, time: 0.001190s
-Itération 184, time: 0.001152s
-Itération 183, time: 0.001124s
-Itération 182, time: 0.001124s
-Itération 181, time: 0.001005s
-Itération 180, time: 0.001161s
-Itération 179, time: 0.001172s
-Itération 178, time: 0.001261s
-Itération 177, time: 0.001269s
-Itération 176, time: 0.001163s
-Itération 175, time: 0.001013s
-Itération 174, time: 0.001073s
-Itération 173, time: 0.001005s
-Itération 172, time: 0.000964s
-Itération 171, time: 0.001093s
-Itération 170, time: 0.001061s
-Itération 169, time: 0.001090s
-Itération 168, time: 0.000967s
-Itération 167, time: 0.001057s
-Itération 166, time: 0.000943s
-Itération 165, time: 0.000949s
-Itération 164, time: 0.001025s
-Itération 163, time: 0.000923s
-Itération 162, time: 0.000971s
-Itération 161, time: 0.000947s
-Itération 160, time: 0.000960s
-Itération 159, time: 0.000926s
-Itération 158, time: 0.000946s
-Itération 157, time: 0.001149s
-Itération 156, time: 0.000907s
-Itération 155, time: 0.001029s
-Itération 154, time: 0.000985s
-Itération 153, time: 0.000924s
-Itération 152, time: 0.000978s
-Itération 151, time: 0.000894s
-Itération 150, time: 0.000859s
-Itération 149, time: 0.001060s
-Itération 148, time: 0.001092s
-Itération 147, time: 0.000850s
-Itération 146, time: 0.000822s
-Itération 145, time: 0.000959s
-Itération 144, time: 0.000730s
-Itération 143, time: 0.000838s
-Itération 142, time: 0.000833s
-Itération 141, time: 0.000907s
-Itération 140, time: 0.000944s
-Itération 139, time: 0.000912s
-Itération 138, time: 0.000843s
-Itération 137, time: 0.000876s
-Itération 136, time: 0.000884s
-Itération 135, time: 0.000885s
-Itération 134, time: 0.000822s
-Itération 133, time: 0.000878s
-Itération 132, time: 0.000862s
-Itération 131, time: 0.000779s
-Itération 130, time: 0.000882s
-Itération 129, time: 0.000585s
-Itération 128, time: 0.000658s
-Itération 127, time: 0.000608s
-Itération 126, time: 0.000711s
-Itération 125, time: 0.000613s
-Itération 124, time: 0.000629s
-Itération 123, time: 0.000561s
-Itération 122, time: 0.000627s
-Itération 121, time: 0.000682s
-Itération 120, time: 0.000612s
-Itération 119, time: 0.000584s
-Itération 118, time: 0.000596s
-Itération 117, time: 0.000584s
-Itération 116, time: 0.000625s
-Itération 115, time: 0.000573s
-Itération 114, time: 0.000532s
-Itération 113, time: 0.000512s
-Itération 112, time: 0.000563s
-Itération 111, time: 0.000517s
-Itération 110, time: 0.000587s
-Itération 109, time: 0.000520s
-Itération 108, time: 0.000518s
-Itération 107, time: 0.000502s
-Itération 106, time: 0.000472s
-Itération 105, time: 0.000539s
-Itération 104, time: 0.000496s
-Itération 103, time: 0.000533s
-Itération 102, time: 0.000481s
-Itération 101, time: 0.000493s
-Itération 100, time: 0.000451s
-Itération 99, time: 0.000480s
-Itération 98, time: 0.000553s
-Itération 97, time: 0.000470s
-Itération 96, time: 0.000448s
-Itération 95, time: 0.000471s
-Itération 94, time: 0.000468s
-Itération 93, time: 0.000490s
-Itération 92, time: 0.000484s
-Itération 91, time: 0.000418s
-Itération 90, time: 0.000424s
-Itération 89, time: 0.000414s
-Itération 88, time: 0.000399s
-Itération 87, time: 0.000425s
-Itération 86, time: 0.000426s
-Itération 85, time: 0.000415s
-Itération 84, time: 0.000383s
-Itération 83, time: 0.000453s
-Itération 82, time: 0.000451s
-Itération 81, time: 0.000328s
-Itération 80, time: 0.000402s
-Itération 79, time: 0.000462s
-Itération 78, time: 0.000362s
-Itération 77, time: 0.000332s
-Itération 76, time: 0.000357s
-Itération 75, time: 0.000336s
-Itération 74, time: 0.000338s
-Itération 73, time: 0.000349s
-Itération 72, time: 0.000310s
-Itération 71, time: 0.000328s
-Itération 70, time: 0.000317s
-Itération 69, time: 0.000251s
-Itération 68, time: 0.000278s
-Itération 67, time: 0.000220s
-Itération 66, time: 0.000403s
-Itération 65, time: 0.000293s
-Itération 64, time: 0.000242s
-Itération 63, time: 0.000201s
-Itération 62, time: 0.000205s
-Itération 61, time: 0.000266s
-Itération 60, time: 0.000216s
-Itération 59, time: 0.000225s
-Itération 58, time: 0.000252s
-Itération 57, time: 0.000200s
-Itération 56, time: 0.000231s
-Itération 55, time: 0.000247s
-Itération 54, time: 0.000177s
-Itération 53, time: 0.000190s
-Itération 52, time: 0.000191s
-Itération 51, time: 0.000226s
-Itération 50, time: 0.000212s
-Itération 49, time: 0.000195s
-Itération 48, time: 0.000203s
-Itération 47, time: 0.000188s
-Itération 46, time: 0.000160s
-Itération 45, time: 0.000190s
-Itération 44, time: 0.000155s
-Itération 43, time: 0.000166s
-Itération 42, time: 0.000148s
-Itération 41, time: 0.000149s
-Itération 40, time: 0.000196s
-Itération 39, time: 0.000142s
-Itération 38, time: 0.000141s
-Itération 37, time: 0.000152s
-Itération 36, time: 0.000164s
-Itération 35, time: 0.000143s
-Itération 34, time: 0.000137s
-Itération 33, time: 0.000144s
-Itération 32, time: 0.000090s
-Itération 31, time: 0.000087s
-Itération 30, time: 0.000081s
-Itération 29, time: 0.000086s
-Itération 28, time: 0.000101s
-Itération 27, time: 0.000096s
-Itération 26, time: 0.000080s
-Itération 25, time: 0.000070s
-Itération 24, time: 0.000062s
-Itération 23, time: 0.000074s
-Itération 22, time: 0.000068s
-Itération 21, time: 0.000061s
-Itération 20, time: 0.000061s
-Itération 19, time: 0.000026s
-Itération 18, time: 0.000077s
-Itération 17, time: 0.000027s
-Itération 16, time: 0.000044s
-Itération 15, time: 0.000022s
-Itération 14, time: 0.000023s
-Itération 13, time: 0.000026s
-Itération 12, time: 0.000031s
-Itération 11, time: 0.000028s
-Itération 10, time: 0.000024s
-Itération 9, time: 0.000027s
-Itération 8, time: 0.000011s
-Itération 7, time: 0.000013s
-Itération 6, time: 0.000009s
-Itération 5, time: 0.000005s
-Itération 4, time: 0.000004s
-Itération 3, time: 0.000002s
-Itération 2, time: 0.000002s
-Itération 1, time: 0.000001s
+900 0.012115
+899 0.012874
+898 0.012286
+897 0.012054
+896 0.012293
+895 0.011384
+894 0.011528
+893 0.012476
+892 0.012593
+891 0.012247
+890 0.011658
+889 0.012453
+888 0.012223
+887 0.011408
+886 0.016756
+885 0.013876
+884 0.013026
+883 0.011250
+882 0.012013
+881 0.012357
+880 0.011117
+879 0.011357
+878 0.011443
+877 0.011522
+876 0.012301
+875 0.011425
+874 0.012217
+873 0.012194
+872 0.010852
+871 0.011366
+870 0.011844
+869 0.012182
+868 0.013593
+867 0.012024
+866 0.010350
+865 0.011450
+864 0.012684
+863 0.011345
+862 0.011789
+861 0.011432
+860 0.009981
+859 0.011478
+858 0.011250
+857 0.011843
+856 0.010893
+855 0.011922
+854 0.011501
+853 0.012315
+852 0.010985
+851 0.011047
+850 0.010499
+849 0.011681
+848 0.010783
+847 0.010950
+846 0.011443
+845 0.012622
+844 0.013342
+843 0.011475
+842 0.011610
+841 0.011047
+840 0.012052
+839 0.011305
+838 0.010928
+837 0.010746
+836 0.010914
+835 0.011687
+834 0.010955
+833 0.011134
+832 0.011294
+831 0.010358
+830 0.011079
+829 0.011147
+828 0.011432
+827 0.011078
+826 0.010279
+825 0.010352
+824 0.011123
+823 0.009914
+822 0.009621
+821 0.011525
+820 0.011114
+819 0.010391
+818 0.010328
+817 0.010351
+816 0.011411
+815 0.010454
+814 0.010406
+813 0.011210
+812 0.011375
+811 0.010676
+810 0.010580
+809 0.009925
+808 0.010437
+807 0.010976
+806 0.010594
+805 0.010278
+804 0.010663
+803 0.013015
+802 0.012558
+801 0.010412
+800 0.010500
+799 0.010543
+798 0.011009
+797 0.011234
+796 0.011220
+795 0.011037
+794 0.010376
+793 0.011265
+792 0.009607
+791 0.009674
+790 0.009819
+789 0.010337
+788 0.009781
+787 0.009737
+786 0.010617
+785 0.009984
+784 0.009455
+783 0.009941
+782 0.010744
+781 0.010397
+780 0.009378
+779 0.010264
+778 0.009809
+777 0.010766
+776 0.009287
+775 0.010829
+774 0.010773
+773 0.010071
+772 0.008966
+771 0.009747
+770 0.010201
+769 0.009763
+768 0.010101
+767 0.009476
+766 0.010430
+765 0.009881
+764 0.010116
+763 0.009177
+762 0.009412
+761 0.009229
+760 0.010042
+759 0.009060
+758 0.009293
+757 0.008879
+756 0.009545
+755 0.010110
+754 0.010197
+753 0.009260
+752 0.008598
+751 0.009662
+750 0.009824
+749 0.009299
+748 0.008961
+747 0.008955
+746 0.009486
+745 0.009525
+744 0.008413
+743 0.009288
+742 0.008499
+741 0.008225
+740 0.009576
+739 0.009932
+738 0.009372
+737 0.009308
+736 0.008769
+735 0.009265
+734 0.009212
+733 0.008595
+732 0.008446
+731 0.010183
+730 0.009568
+729 0.007958
+728 0.008619
+727 0.009180
+726 0.008418
+725 0.009434
+724 0.008672
+723 0.008667
+722 0.009378
+721 0.008626
+720 0.008238
+719 0.007929
+718 0.009160
+717 0.009222
+716 0.008400
+715 0.009169
+714 0.008740
+713 0.008311
+712 0.009139
+711 0.008155
+710 0.008448
+709 0.008745
+708 0.009091
+707 0.008356
+706 0.008236
+705 0.008991
+704 0.008634
+703 0.008658
+702 0.008634
+701 0.008481
+700 0.007969
+699 0.008591
+698 0.008054
+697 0.009024
+696 0.008677
+695 0.008475
+694 0.008865
+693 0.008377
+692 0.008475
+691 0.007899
+690 0.008601
+689 0.008541
+688 0.008682
+687 0.008421
+686 0.008690
+685 0.008158
+684 0.008502
+683 0.008188
+682 0.008489
+681 0.007535
+680 0.008369
+679 0.008032
+678 0.008986
+677 0.008528
+676 0.008743
+675 0.008172
+674 0.008173
+673 0.007475
+672 0.007787
+671 0.008606
+670 0.008387
+669 0.008144
+668 0.008879
+667 0.007985
+666 0.007910
+665 0.008448
+664 0.007581
+663 0.008902
+662 0.007817
+661 0.007676
+660 0.007094
+659 0.008388
+658 0.007694
+657 0.008396
+656 0.007872
+655 0.008462
+654 0.007818
+653 0.007501
+652 0.007947
+651 0.007812
+650 0.007868
+649 0.007675
+648 0.008177
+647 0.008691
+646 0.007678
+645 0.007490
+644 0.008114
+643 0.007895
+642 0.007613
+641 0.008403
+640 0.008094
+639 0.008281
+638 0.007123
+637 0.007347
+636 0.007097
+635 0.007428
+634 0.007575
+633 0.006836
+632 0.007530
+631 0.007341
+630 0.007515
+629 0.007752
+628 0.007451
+627 0.007577
+626 0.007237
+625 0.007065
+624 0.007325
+623 0.007275
+622 0.007058
+621 0.007306
+620 0.008229
+619 0.007946
+618 0.007752
+617 0.006561
+616 0.007375
+615 0.006539
+614 0.007079
+613 0.007334
+612 0.007452
+611 0.007375
+610 0.007524
+609 0.007188
+608 0.007058
+607 0.007115
+606 0.007216
+605 0.007323
+604 0.007219
+603 0.007307
+602 0.006693
+601 0.006669
+600 0.007169
+599 0.006452
+598 0.007170
+597 0.007019
+596 0.007199
+595 0.007191
+594 0.006611
+593 0.007435
+592 0.006518
+591 0.006482
+590 0.007057
+589 0.006222
+588 0.007201
+587 0.006839
+586 0.007329
+585 0.006840
+584 0.007079
+583 0.007279
+582 0.006229
+581 0.006930
+580 0.006404
+579 0.006399
+578 0.006613
+577 0.006383
+576 0.006724
+575 0.006691
+574 0.006039
+573 0.006924
+572 0.006215
+571 0.006621
+570 0.006424
+569 0.006326
+568 0.006230
+567 0.006680
+566 0.007136
+565 0.006480
+564 0.006751
+563 0.006209
+562 0.006046
+561 0.006638
+560 0.006382
+559 0.005768
+558 0.006502
+557 0.005711
+556 0.006588
+555 0.006101
+554 0.006581
+553 0.006820
+552 0.006187
+551 0.005967
+550 0.006062
+549 0.006090
+548 0.006229
+547 0.006404
+546 0.006527
+545 0.006647
+544 0.005990
+543 0.006300
+542 0.006307
+541 0.006101
+540 0.005911
+539 0.005884
+538 0.005786
+537 0.006411
+536 0.006002
+535 0.006249
+534 0.005801
+533 0.006096
+532 0.006527
+531 0.006202
+530 0.006781
+529 0.005864
+528 0.005738
+527 0.005796
+526 0.006413
+525 0.005929
+524 0.005919
+523 0.006035
+522 0.005777
+521 0.005664
+520 0.005901
+519 0.005843
+518 0.006074
+517 0.006213
+516 0.006211
+515 0.006492
+514 0.005992
+513 0.005895
+512 0.005008
+511 0.004687
+510 0.004117
+509 0.005140
+508 0.004236
+507 0.004716
+506 0.004936
+505 0.004752
+504 0.005226
+503 0.004697
+502 0.004110
+501 0.004854
+500 0.004444
+499 0.004497
+498 0.004223
+497 0.004358
+496 0.004150
+495 0.004596
+494 0.004652
+493 0.003957
+492 0.004950
+491 0.004536
+490 0.004514
+489 0.004929
+488 0.004950
+487 0.004391
+486 0.004957
+485 0.004114
+484 0.004530
+483 0.004811
+482 0.004631
+481 0.004704
+480 0.004467
+479 0.004203
+478 0.004557
+477 0.004479
+476 0.004054
+475 0.004476
+474 0.004529
+473 0.003743
+472 0.004344
+471 0.004668
+470 0.004424
+469 0.004486
+468 0.004146
+467 0.003846
+466 0.003948
+465 0.004198
+464 0.004100
+463 0.003921
+462 0.004225
+461 0.003859
+460 0.004358
+459 0.004133
+458 0.003587
+457 0.003971
+456 0.003998
+455 0.004249
+454 0.004080
+453 0.004049
+452 0.004192
+451 0.004357
+450 0.004630
+449 0.004148
+448 0.003887
+447 0.003653
+446 0.003729
+445 0.004178
+444 0.003556
+443 0.004148
+442 0.003850
+441 0.003671
+440 0.003812
+439 0.004061
+438 0.004298
+437 0.003895
+436 0.004073
+435 0.004063
+434 0.003938
+433 0.003672
+432 0.004333
+431 0.003773
+430 0.003808
+429 0.004402
+428 0.004180
+427 0.004058
+426 0.003691
+425 0.003879
+424 0.004008
+423 0.003663
+422 0.003551
+421 0.003776
+420 0.003949
+419 0.003505
+418 0.003457
+417 0.003812
+416 0.003670
+415 0.003354
+414 0.003288
+413 0.003521
+412 0.003829
+411 0.003453
+410 0.003931
+409 0.003406
+408 0.003727
+407 0.003499
+406 0.003189
+405 0.003661
+404 0.003647
+403 0.003254
+402 0.003650
+401 0.003282
+400 0.003650
+399 0.003562
+398 0.003388
+397 0.003488
+396 0.003438
+395 0.003436
+394 0.003710
+393 0.003225
+392 0.003435
+391 0.003325
+390 0.003517
+389 0.003227
+388 0.003197
+387 0.003154
+386 0.003149
+385 0.003480
+384 0.003203
+383 0.003633
+382 0.003336
+381 0.003371
+380 0.003568
+379 0.003070
+378 0.003195
+377 0.003149
+376 0.003173
+375 0.003277
+374 0.002799
+373 0.003299
+372 0.003216
+371 0.003172
+370 0.002995
+369 0.003333
+368 0.003432
+367 0.003242
+366 0.003151
+365 0.002995
+364 0.002992
+363 0.003072
+362 0.003103
+361 0.003088
+360 0.003291
+359 0.003409
+358 0.002793
+357 0.002845
+356 0.003448
+355 0.003042
+354 0.002965
+353 0.003043
+352 0.003175
+351 0.002821
+350 0.002873
+349 0.003014
+348 0.002822
+347 0.002883
+346 0.002943
+345 0.002938
+344 0.002579
+343 0.002963
+342 0.003097
+341 0.002806
+340 0.002754
+339 0.002978
+338 0.002894
+337 0.002662
+336 0.002973
+335 0.002649
+334 0.002906
+333 0.002866
+332 0.002779
+331 0.002856
+330 0.002799
+329 0.002706
+328 0.002691
+327 0.002535
+326 0.002784
+325 0.002769
+324 0.002813
+323 0.002803
+322 0.002651
+321 0.002868
+320 0.002824
+319 0.002673
+318 0.002479
+317 0.002531
+316 0.002704
+315 0.002502
+314 0.002722
+313 0.002432
+312 0.002577
+311 0.002419
+310 0.002630
+309 0.002418
+308 0.002574
+307 0.002550
+306 0.002425
+305 0.002651
+304 0.002692
+303 0.002600
+302 0.002452
+301 0.002581
+300 0.002701
+299 0.002457
+298 0.002659
+297 0.002345
+296 0.002555
+295 0.002501
+294 0.002417
+293 0.002318
+292 0.002658
+291 0.002692
+290 0.002760
+289 0.002418
+288 0.002297
+287 0.002542
+286 0.002272
+285 0.002540
+284 0.002281
+283 0.002268
+282 0.002241
+281 0.002102
+280 0.002229
+279 0.002253
+278 0.002194
+277 0.002147
+276 0.002238
+275 0.002129
+274 0.002242
+273 0.002285
+272 0.002252
+271 0.002256
+270 0.002118
+269 0.001931
+268 0.002118
+267 0.002226
+266 0.002070
+265 0.002322
+264 0.002174
+263 0.002032
+262 0.002053
+261 0.002304
+260 0.002366
+259 0.002204
+258 0.001625
+257 0.002257
+256 0.001824
+255 0.001594
+254 0.001467
+253 0.001505
+252 0.001680
+251 0.001708
+250 0.001498
+249 0.001567
+248 0.001722
+247 0.001458
+246 0.001647
+245 0.001503
+244 0.001636
+243 0.001677
+242 0.001608
+241 0.001591
+240 0.001588
+239 0.001378
+238 0.001502
+237 0.001487
+236 0.001550
+235 0.001525
+234 0.001624
+233 0.001619
+232 0.001680
+231 0.001539
+230 0.001347
+229 0.001601
+228 0.001472
+227 0.001291
+226 0.001418
+225 0.001367
+224 0.001480
+223 0.001455
+222 0.001414
+221 0.001442
+220 0.001222
+219 0.001366
+218 0.001429
+217 0.001407
+216 0.001516
+215 0.001365
+214 0.001444
+213 0.001308
+212 0.001487
+211 0.001404
+210 0.001316
+209 0.001450
+208 0.001392
+207 0.001433
+206 0.001459
+205 0.001380
+204 0.001415
+203 0.001197
+202 0.001149
+201 0.001284
+200 0.001297
+199 0.001179
+198 0.001364
+197 0.001290
+196 0.001198
+195 0.001198
+194 0.001138
+193 0.001275
+192 0.001113
+191 0.001218
+190 0.001195
+189 0.001261
+188 0.001224
+187 0.001095
+186 0.001142
+185 0.001130
+184 0.001151
+183 0.001131
+182 0.001127
+181 0.001002
+180 0.001197
+179 0.001157
+178 0.001263
+177 0.001272
+176 0.001121
+175 0.001018
+174 0.001074
+173 0.000980
+172 0.001018
+171 0.001049
+170 0.001017
+169 0.001103
+168 0.000941
+167 0.001025
+166 0.000961
+165 0.000954
+164 0.001006
+163 0.000943
+162 0.001018
+161 0.000891
+160 0.000982
+159 0.000921
+158 0.000907
+157 0.001106
+156 0.000973
+155 0.001076
+154 0.001017
+153 0.000908
+152 0.000995
+151 0.000853
+150 0.000819
+149 0.001041
+148 0.000934
+147 0.000881
+146 0.000826
+145 0.000877
+144 0.000773
+143 0.000883
+142 0.000830
+141 0.000920
+140 0.000958
+139 0.000914
+138 0.000816
+137 0.000860
+136 0.000859
+135 0.000881
+134 0.000796
+133 0.000832
+132 0.000891
+131 0.000822
+130 0.000883
+129 0.000606
+128 0.000657
+127 0.000610
+126 0.000712
+125 0.000643
+124 0.000606
+123 0.000540
+122 0.000562
+121 0.000664
+120 0.000615
+119 0.000558
+118 0.000660
+117 0.000563
+116 0.000631
+115 0.000600
+114 0.000548
+113 0.000523
+112 0.000565
+111 0.000528
+110 0.000615
+109 0.000533
+108 0.000531
+107 0.000541
+106 0.000491
+105 0.000532
+104 0.000511
+103 0.000546
+102 0.000532
+101 0.000689
+100 0.000461
+99 0.000474
+98 0.000541
+97 0.000459
+96 0.000432
+95 0.000526
+94 0.000484
+93 0.000535
+92 0.000475
+91 0.000427
+90 0.000412
+89 0.000414
+88 0.000394
+87 0.000423
+86 0.000436
+85 0.000427
+84 0.000396
+83 0.000442
+82 0.000439
+81 0.000315
+80 0.000381
+79 0.000384
+78 0.000344
+77 0.000345
+76 0.000357
+75 0.000368
+74 0.000422
+73 0.000421
+72 0.000382
+71 0.000382
+70 0.000457
+69 0.000323
+68 0.000368
+67 0.000286
+66 0.000536
+65 0.000374
+64 0.000305
+63 0.000246
+62 0.000270
+61 0.000359
+60 0.000265
+59 0.000275
+58 0.000318
+57 0.000245
+56 0.000285
+55 0.000311
+54 0.000258
+53 0.000255
+52 0.000253
+51 0.000315
+50 0.000267
+49 0.000229
+48 0.000294
+47 0.000249
+46 0.000234
+45 0.000254
+44 0.000200
+43 0.000232
+42 0.000190
+41 0.000193
+40 0.000259
+39 0.000190
+38 0.000166
+37 0.000202
+36 0.000221
+35 0.000187
+34 0.000176
+33 0.000204
+32 0.000134
+31 0.000114
+30 0.000108
+29 0.000105
+28 0.000105
+27 0.000142
+26 0.000123
+25 0.000098
+24 0.000083
+23 0.000098
+22 0.000115
+21 0.000066
+20 0.000063
+19 0.000027
+18 0.000082
+17 0.000033
+16 0.000056
+15 0.000029
+14 0.000028
+13 0.000031
+12 0.000032
+11 0.000028
+10 0.000025
+9 0.000034
+8 0.000012
+7 0.000013
+6 0.000010
+5 0.000005
+4 0.000005
+3 0.000002
+2 0.000003
+1 0.000001

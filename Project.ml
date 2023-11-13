@@ -175,19 +175,42 @@ let rec compressionParListe (g : arbre_decision) (ldv : listeDejaVus) =
         | Some (_,abr) -> (abr,ldv)
         | None ->
           let nouveau = Node(n,gauche,droite) in (nouveau,(n1,nouveau)::ldv2)
-          
 
-(* Type pour la table de hachage des liens déjà visités *)
-type deja_vus = (int * int, bool) Hashtbl.t 
-
-(* Fonction qui construit un fichier représentant le graphe en langage dot *)
+(* Fonction qui construit un fichier représentant le graphe non compresse en langage dot *)
 open Printf 
 let rec dot tree =
   let oc = open_out "monfichier.dot" in
   fprintf oc "digraph  {\n";
+  
+  let rec aux parent = 
+    match parent with 
+    | Leaf a -> 
+                if a then fprintf oc " %d [label = True] \n" (Obj.magic parent)
+                else fprintf oc "  %d [label = False] \n" (Obj.magic parent)
 
-  (* Initialisation de la table de hachage pour les liens déjà visités *)
-  let deja_vus = Hashtbl.create 10 in
+    | Node (n, left, right) ->
+                              fprintf oc "  %d [label = %d];\n" (Obj.magic parent) n;
+                              fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) (Obj.magic left);
+                              fprintf oc "  %d -> %d  \n" (Obj.magic parent) (Obj.magic right);
+                              aux left;
+                              aux right;
+  in
+  aux tree;  
+  fprintf oc "}\n";
+  close_out oc;;
+
+(* Type pour la table de hachage des liens déjà visités *)
+type deja_vus = (int * int, bool) Hashtbl.t 
+
+(* Fonction qui construit un fichier représentant le graphe compressé en langage dot *)
+open Printf 
+let rec dot_c tree =
+  let oc = open_out "monfichier_c.dot" in
+  fprintf oc "digraph  {\n";
+  
+  (* Initialisation des tables de hachage pour les liens déjà visités *)
+  let deja_vus_gauche = Hashtbl.create 10 in
+  let deja_vus_droite = Hashtbl.create 10 in
 
   let rec aux parent =
     match parent with 
@@ -201,14 +224,17 @@ let rec dot tree =
         let left_node_id = Obj.magic left in
         let right_node_id = Obj.magic right in
 
-        (* Ajout des liens gauche et droit *)
-        fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) left_node_id;
-        Hashtbl.add deja_vus (Obj.magic parent, left_node_id) true;
-        aux left;
+        (* Ajout du lien gauche *)
+        if not (Hashtbl.mem deja_vus_gauche (Obj.magic parent, left_node_id)) then begin
+          fprintf oc "  %d -> %d [style=dotted] \n" (Obj.magic parent) left_node_id;
+          Hashtbl.add deja_vus_gauche (Obj.magic parent, left_node_id) true;
+          aux left;
+        end;
 
-        if right_node_id <> 0 then begin
+        (* Ajout du lien droit *)
+        if right_node_id <> 0 && not (Hashtbl.mem deja_vus_droite (Obj.magic parent, right_node_id)) then begin
           fprintf oc "  %d -> %d  \n" (Obj.magic parent) right_node_id;
-          Hashtbl.add deja_vus (Obj.magic parent, right_node_id) true;
+          Hashtbl.add deja_vus_droite (Obj.magic parent, right_node_id) true;
           aux right;
         end;
   in
@@ -220,7 +246,8 @@ let rec dot tree =
   
 (*let tree = cons_arbre (decomposition [25899L]) in dot tree *)
 let (o,n) = compressionParListe (cons_arbre (decomposition [25899L])) [] in  
-dot o
+dot_c o;
+dot (cons_arbre (decomposition [25899L]))
 
 (* Partie 4 *)
 
@@ -312,9 +339,9 @@ let rec countnode tree =
          let test_tree, _ = compressionParArbre arbre Empty in
          let stop = Sys.time() in
          let node_count = countnode test_tree in
-         fprintf oc "Itération %d, time: %fs\n" k (stop -. start);
-         fprintf ac "Itération %d, nodeeco: %d\n" k node_countbefore;
-         fprintf ec "Itération %d, nodeeco: %d\n" k node_count;
+         fprintf oc "%d %f\n" k (stop -. start);
+         fprintf ac "%d %d\n" k node_countbefore;
+         fprintf ec "%d %d\n" k node_count;
          aux (k - 1)
      in
      aux k ;;

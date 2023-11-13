@@ -1,900 +1,900 @@
-Itération 900, nodeeco: 623
-Itération 899, nodeeco: 612
-Itération 898, nodeeco: 590
-Itération 897, nodeeco: 621
-Itération 896, nodeeco: 635
-Itération 895, nodeeco: 588
-Itération 894, nodeeco: 615
-Itération 893, nodeeco: 598
-Itération 892, nodeeco: 610
-Itération 891, nodeeco: 599
-Itération 890, nodeeco: 595
-Itération 889, nodeeco: 574
-Itération 888, nodeeco: 623
-Itération 887, nodeeco: 601
-Itération 886, nodeeco: 601
-Itération 885, nodeeco: 619
-Itération 884, nodeeco: 610
-Itération 883, nodeeco: 578
-Itération 882, nodeeco: 617
-Itération 881, nodeeco: 603
-Itération 880, nodeeco: 587
-Itération 879, nodeeco: 582
-Itération 878, nodeeco: 583
-Itération 877, nodeeco: 591
-Itération 876, nodeeco: 598
-Itération 875, nodeeco: 550
-Itération 874, nodeeco: 578
-Itération 873, nodeeco: 597
-Itération 872, nodeeco: 604
-Itération 871, nodeeco: 580
-Itération 870, nodeeco: 602
-Itération 869, nodeeco: 596
-Itération 868, nodeeco: 615
-Itération 867, nodeeco: 611
-Itération 866, nodeeco: 576
-Itération 865, nodeeco: 569
-Itération 864, nodeeco: 611
-Itération 863, nodeeco: 572
-Itération 862, nodeeco: 554
-Itération 861, nodeeco: 597
-Itération 860, nodeeco: 569
-Itération 859, nodeeco: 588
-Itération 858, nodeeco: 573
-Itération 857, nodeeco: 580
-Itération 856, nodeeco: 587
-Itération 855, nodeeco: 569
-Itération 854, nodeeco: 588
-Itération 853, nodeeco: 581
-Itération 852, nodeeco: 562
-Itération 851, nodeeco: 582
-Itération 850, nodeeco: 589
-Itération 849, nodeeco: 553
-Itération 848, nodeeco: 568
-Itération 847, nodeeco: 567
-Itération 846, nodeeco: 551
-Itération 845, nodeeco: 588
-Itération 844, nodeeco: 544
-Itération 843, nodeeco: 582
-Itération 842, nodeeco: 578
-Itération 841, nodeeco: 587
-Itération 840, nodeeco: 559
-Itération 839, nodeeco: 578
-Itération 838, nodeeco: 569
-Itération 837, nodeeco: 580
-Itération 836, nodeeco: 573
-Itération 835, nodeeco: 606
-Itération 834, nodeeco: 563
-Itération 833, nodeeco: 592
-Itération 832, nodeeco: 575
-Itération 831, nodeeco: 577
-Itération 830, nodeeco: 562
-Itération 829, nodeeco: 538
-Itération 828, nodeeco: 563
-Itération 827, nodeeco: 536
-Itération 826, nodeeco: 546
-Itération 825, nodeeco: 546
-Itération 824, nodeeco: 554
-Itération 823, nodeeco: 526
-Itération 822, nodeeco: 537
-Itération 821, nodeeco: 574
-Itération 820, nodeeco: 542
-Itération 819, nodeeco: 529
-Itération 818, nodeeco: 521
-Itération 817, nodeeco: 542
-Itération 816, nodeeco: 548
-Itération 815, nodeeco: 554
-Itération 814, nodeeco: 562
-Itération 813, nodeeco: 563
-Itération 812, nodeeco: 556
-Itération 811, nodeeco: 546
-Itération 810, nodeeco: 521
-Itération 809, nodeeco: 537
-Itération 808, nodeeco: 560
-Itération 807, nodeeco: 561
-Itération 806, nodeeco: 534
-Itération 805, nodeeco: 547
-Itération 804, nodeeco: 545
-Itération 803, nodeeco: 539
-Itération 802, nodeeco: 541
-Itération 801, nodeeco: 556
-Itération 800, nodeeco: 554
-Itération 799, nodeeco: 568
-Itération 798, nodeeco: 494
-Itération 797, nodeeco: 532
-Itération 796, nodeeco: 537
-Itération 795, nodeeco: 535
-Itération 794, nodeeco: 544
-Itération 793, nodeeco: 528
-Itération 792, nodeeco: 529
-Itération 791, nodeeco: 542
-Itération 790, nodeeco: 538
-Itération 789, nodeeco: 526
-Itération 788, nodeeco: 532
-Itération 787, nodeeco: 516
-Itération 786, nodeeco: 524
-Itération 785, nodeeco: 512
-Itération 784, nodeeco: 520
-Itération 783, nodeeco: 529
-Itération 782, nodeeco: 526
-Itération 781, nodeeco: 549
-Itération 780, nodeeco: 494
-Itération 779, nodeeco: 517
-Itération 778, nodeeco: 511
-Itération 777, nodeeco: 529
-Itération 776, nodeeco: 513
-Itération 775, nodeeco: 518
-Itération 774, nodeeco: 525
-Itération 773, nodeeco: 502
-Itération 772, nodeeco: 525
-Itération 771, nodeeco: 513
-Itération 770, nodeeco: 531
-Itération 769, nodeeco: 524
-Itération 768, nodeeco: 544
-Itération 767, nodeeco: 521
-Itération 766, nodeeco: 531
-Itération 765, nodeeco: 513
-Itération 764, nodeeco: 531
-Itération 763, nodeeco: 517
-Itération 762, nodeeco: 523
-Itération 761, nodeeco: 504
-Itération 760, nodeeco: 512
-Itération 759, nodeeco: 521
-Itération 758, nodeeco: 495
-Itération 757, nodeeco: 498
-Itération 756, nodeeco: 530
-Itération 755, nodeeco: 522
-Itération 754, nodeeco: 534
-Itération 753, nodeeco: 500
-Itération 752, nodeeco: 497
-Itération 751, nodeeco: 515
-Itération 750, nodeeco: 509
-Itération 749, nodeeco: 514
-Itération 748, nodeeco: 514
-Itération 747, nodeeco: 476
-Itération 746, nodeeco: 504
-Itération 745, nodeeco: 517
-Itération 744, nodeeco: 482
-Itération 743, nodeeco: 524
-Itération 742, nodeeco: 487
-Itération 741, nodeeco: 474
-Itération 740, nodeeco: 510
-Itération 739, nodeeco: 526
-Itération 738, nodeeco: 490
-Itération 737, nodeeco: 486
-Itération 736, nodeeco: 491
-Itération 735, nodeeco: 500
-Itération 734, nodeeco: 454
-Itération 733, nodeeco: 523
-Itération 732, nodeeco: 513
-Itération 731, nodeeco: 497
-Itération 730, nodeeco: 501
-Itération 729, nodeeco: 499
-Itération 728, nodeeco: 505
-Itération 727, nodeeco: 472
-Itération 726, nodeeco: 470
-Itération 725, nodeeco: 475
-Itération 724, nodeeco: 491
-Itération 723, nodeeco: 502
-Itération 722, nodeeco: 505
-Itération 721, nodeeco: 492
-Itération 720, nodeeco: 459
-Itération 719, nodeeco: 479
-Itération 718, nodeeco: 492
-Itération 717, nodeeco: 474
-Itération 716, nodeeco: 482
-Itération 715, nodeeco: 511
-Itération 714, nodeeco: 482
-Itération 713, nodeeco: 444
-Itération 712, nodeeco: 476
-Itération 711, nodeeco: 450
-Itération 710, nodeeco: 470
-Itération 709, nodeeco: 464
-Itération 708, nodeeco: 485
-Itération 707, nodeeco: 496
-Itération 706, nodeeco: 486
-Itération 705, nodeeco: 500
-Itération 704, nodeeco: 484
-Itération 703, nodeeco: 472
-Itération 702, nodeeco: 483
-Itération 701, nodeeco: 451
-Itération 700, nodeeco: 465
-Itération 699, nodeeco: 456
-Itération 698, nodeeco: 478
-Itération 697, nodeeco: 481
-Itération 696, nodeeco: 462
-Itération 695, nodeeco: 496
-Itération 694, nodeeco: 471
-Itération 693, nodeeco: 475
-Itération 692, nodeeco: 462
-Itération 691, nodeeco: 469
-Itération 690, nodeeco: 471
-Itération 689, nodeeco: 459
-Itération 688, nodeeco: 444
-Itération 687, nodeeco: 472
-Itération 686, nodeeco: 466
-Itération 685, nodeeco: 479
-Itération 684, nodeeco: 473
-Itération 683, nodeeco: 449
-Itération 682, nodeeco: 465
-Itération 681, nodeeco: 444
-Itération 680, nodeeco: 459
-Itération 679, nodeeco: 475
-Itération 678, nodeeco: 459
-Itération 677, nodeeco: 453
-Itération 676, nodeeco: 451
-Itération 675, nodeeco: 461
-Itération 674, nodeeco: 440
-Itération 673, nodeeco: 429
-Itération 672, nodeeco: 445
-Itération 671, nodeeco: 486
-Itération 670, nodeeco: 463
-Itération 669, nodeeco: 449
-Itération 668, nodeeco: 457
-Itération 667, nodeeco: 468
-Itération 666, nodeeco: 466
-Itération 665, nodeeco: 486
-Itération 664, nodeeco: 435
-Itération 663, nodeeco: 467
-Itération 662, nodeeco: 437
-Itération 661, nodeeco: 446
-Itération 660, nodeeco: 444
-Itération 659, nodeeco: 423
-Itération 658, nodeeco: 410
-Itération 657, nodeeco: 431
-Itération 656, nodeeco: 435
-Itération 655, nodeeco: 438
-Itération 654, nodeeco: 443
-Itération 653, nodeeco: 435
-Itération 652, nodeeco: 418
-Itération 651, nodeeco: 447
-Itération 650, nodeeco: 443
-Itération 649, nodeeco: 436
-Itération 648, nodeeco: 421
-Itération 647, nodeeco: 449
-Itération 646, nodeeco: 419
-Itération 645, nodeeco: 447
-Itération 644, nodeeco: 451
-Itération 643, nodeeco: 441
-Itération 642, nodeeco: 448
-Itération 641, nodeeco: 441
-Itération 640, nodeeco: 443
-Itération 639, nodeeco: 426
-Itération 638, nodeeco: 420
-Itération 637, nodeeco: 437
-Itération 636, nodeeco: 432
-Itération 635, nodeeco: 419
-Itération 634, nodeeco: 439
-Itération 633, nodeeco: 399
-Itération 632, nodeeco: 445
-Itération 631, nodeeco: 425
-Itération 630, nodeeco: 401
-Itération 629, nodeeco: 430
-Itération 628, nodeeco: 422
-Itération 627, nodeeco: 399
-Itération 626, nodeeco: 425
-Itération 625, nodeeco: 431
-Itération 624, nodeeco: 404
-Itération 623, nodeeco: 426
-Itération 622, nodeeco: 429
-Itération 621, nodeeco: 415
-Itération 620, nodeeco: 445
-Itération 619, nodeeco: 434
-Itération 618, nodeeco: 423
-Itération 617, nodeeco: 397
-Itération 616, nodeeco: 400
-Itération 615, nodeeco: 414
-Itération 614, nodeeco: 417
-Itération 613, nodeeco: 412
-Itération 612, nodeeco: 404
-Itération 611, nodeeco: 438
-Itération 610, nodeeco: 432
-Itération 609, nodeeco: 389
-Itération 608, nodeeco: 424
-Itération 607, nodeeco: 391
-Itération 606, nodeeco: 387
-Itération 605, nodeeco: 428
-Itération 604, nodeeco: 425
-Itération 603, nodeeco: 385
-Itération 602, nodeeco: 408
-Itération 601, nodeeco: 416
-Itération 600, nodeeco: 415
-Itération 599, nodeeco: 403
-Itération 598, nodeeco: 416
-Itération 597, nodeeco: 399
-Itération 596, nodeeco: 390
-Itération 595, nodeeco: 426
-Itération 594, nodeeco: 425
-Itération 593, nodeeco: 405
-Itération 592, nodeeco: 382
-Itération 591, nodeeco: 417
-Itération 590, nodeeco: 425
-Itération 589, nodeeco: 398
-Itération 588, nodeeco: 417
-Itération 587, nodeeco: 401
-Itération 586, nodeeco: 417
-Itération 585, nodeeco: 378
-Itération 584, nodeeco: 400
-Itération 583, nodeeco: 386
-Itération 582, nodeeco: 382
-Itération 581, nodeeco: 393
-Itération 580, nodeeco: 373
-Itération 579, nodeeco: 384
-Itération 578, nodeeco: 388
-Itération 577, nodeeco: 383
-Itération 576, nodeeco: 383
-Itération 575, nodeeco: 404
-Itération 574, nodeeco: 395
-Itération 573, nodeeco: 397
-Itération 572, nodeeco: 400
-Itération 571, nodeeco: 382
-Itération 570, nodeeco: 407
-Itération 569, nodeeco: 401
-Itération 568, nodeeco: 382
-Itération 567, nodeeco: 375
-Itération 566, nodeeco: 392
-Itération 565, nodeeco: 412
-Itération 564, nodeeco: 382
-Itération 563, nodeeco: 377
-Itération 562, nodeeco: 361
-Itération 561, nodeeco: 391
-Itération 560, nodeeco: 373
-Itération 559, nodeeco: 374
-Itération 558, nodeeco: 382
-Itération 557, nodeeco: 361
-Itération 556, nodeeco: 392
-Itération 555, nodeeco: 376
-Itération 554, nodeeco: 367
-Itération 553, nodeeco: 369
-Itération 552, nodeeco: 397
-Itération 551, nodeeco: 360
-Itération 550, nodeeco: 368
-Itération 549, nodeeco: 395
-Itération 548, nodeeco: 377
-Itération 547, nodeeco: 355
-Itération 546, nodeeco: 384
-Itération 545, nodeeco: 369
-Itération 544, nodeeco: 363
-Itération 543, nodeeco: 375
-Itération 542, nodeeco: 363
-Itération 541, nodeeco: 358
-Itération 540, nodeeco: 351
-Itération 539, nodeeco: 364
-Itération 538, nodeeco: 368
-Itération 537, nodeeco: 365
-Itération 536, nodeeco: 356
-Itération 535, nodeeco: 356
-Itération 534, nodeeco: 343
-Itération 533, nodeeco: 373
-Itération 532, nodeeco: 357
-Itération 531, nodeeco: 360
-Itération 530, nodeeco: 368
-Itération 529, nodeeco: 355
-Itération 528, nodeeco: 349
-Itération 527, nodeeco: 345
-Itération 526, nodeeco: 353
-Itération 525, nodeeco: 364
-Itération 524, nodeeco: 352
-Itération 523, nodeeco: 325
-Itération 522, nodeeco: 349
-Itération 521, nodeeco: 342
-Itération 520, nodeeco: 355
-Itération 519, nodeeco: 363
-Itération 518, nodeeco: 349
-Itération 517, nodeeco: 346
-Itération 516, nodeeco: 356
-Itération 515, nodeeco: 369
-Itération 514, nodeeco: 344
-Itération 513, nodeeco: 348
-Itération 512, nodeeco: 343
-Itération 511, nodeeco: 359
-Itération 510, nodeeco: 353
-Itération 509, nodeeco: 352
-Itération 508, nodeeco: 351
-Itération 507, nodeeco: 338
-Itération 506, nodeeco: 336
-Itération 505, nodeeco: 324
-Itération 504, nodeeco: 336
-Itération 503, nodeeco: 343
-Itération 502, nodeeco: 324
-Itération 501, nodeeco: 342
-Itération 500, nodeeco: 333
-Itération 499, nodeeco: 343
-Itération 498, nodeeco: 315
-Itération 497, nodeeco: 322
-Itération 496, nodeeco: 327
-Itération 495, nodeeco: 354
-Itération 494, nodeeco: 330
-Itération 493, nodeeco: 332
-Itération 492, nodeeco: 347
-Itération 491, nodeeco: 317
-Itération 490, nodeeco: 318
-Itération 489, nodeeco: 343
-Itération 488, nodeeco: 334
-Itération 487, nodeeco: 312
-Itération 486, nodeeco: 334
-Itération 485, nodeeco: 316
-Itération 484, nodeeco: 343
-Itération 483, nodeeco: 336
-Itération 482, nodeeco: 323
-Itération 481, nodeeco: 322
-Itération 480, nodeeco: 312
-Itération 479, nodeeco: 320
-Itération 478, nodeeco: 330
-Itération 477, nodeeco: 292
-Itération 476, nodeeco: 321
-Itération 475, nodeeco: 303
-Itération 474, nodeeco: 330
-Itération 473, nodeeco: 320
-Itération 472, nodeeco: 318
-Itération 471, nodeeco: 318
-Itération 470, nodeeco: 313
-Itération 469, nodeeco: 319
-Itération 468, nodeeco: 327
-Itération 467, nodeeco: 322
-Itération 466, nodeeco: 302
-Itération 465, nodeeco: 323
-Itération 464, nodeeco: 304
-Itération 463, nodeeco: 295
-Itération 462, nodeeco: 305
-Itération 461, nodeeco: 303
-Itération 460, nodeeco: 323
-Itération 459, nodeeco: 298
-Itération 458, nodeeco: 271
-Itération 457, nodeeco: 328
-Itération 456, nodeeco: 296
-Itération 455, nodeeco: 311
-Itération 454, nodeeco: 294
-Itération 453, nodeeco: 283
-Itération 452, nodeeco: 277
-Itération 451, nodeeco: 304
-Itération 450, nodeeco: 315
-Itération 449, nodeeco: 314
-Itération 448, nodeeco: 300
-Itération 447, nodeeco: 306
-Itération 446, nodeeco: 304
-Itération 445, nodeeco: 326
-Itération 444, nodeeco: 296
-Itération 443, nodeeco: 307
-Itération 442, nodeeco: 307
-Itération 441, nodeeco: 292
-Itération 440, nodeeco: 304
-Itération 439, nodeeco: 328
-Itération 438, nodeeco: 296
-Itération 437, nodeeco: 299
-Itération 436, nodeeco: 296
-Itération 435, nodeeco: 282
-Itération 434, nodeeco: 261
-Itération 433, nodeeco: 278
-Itération 432, nodeeco: 298
-Itération 431, nodeeco: 288
-Itération 430, nodeeco: 303
-Itération 429, nodeeco: 302
-Itération 428, nodeeco: 316
-Itération 427, nodeeco: 298
-Itération 426, nodeeco: 296
-Itération 425, nodeeco: 287
-Itération 424, nodeeco: 297
-Itération 423, nodeeco: 282
-Itération 422, nodeeco: 278
-Itération 421, nodeeco: 294
-Itération 420, nodeeco: 269
-Itération 419, nodeeco: 256
-Itération 418, nodeeco: 265
-Itération 417, nodeeco: 267
-Itération 416, nodeeco: 286
-Itération 415, nodeeco: 262
-Itération 414, nodeeco: 276
-Itération 413, nodeeco: 255
-Itération 412, nodeeco: 284
-Itération 411, nodeeco: 293
-Itération 410, nodeeco: 281
-Itération 409, nodeeco: 250
-Itération 408, nodeeco: 289
-Itération 407, nodeeco: 274
-Itération 406, nodeeco: 258
-Itération 405, nodeeco: 261
-Itération 404, nodeeco: 271
-Itération 403, nodeeco: 272
-Itération 402, nodeeco: 281
-Itération 401, nodeeco: 264
-Itération 400, nodeeco: 255
-Itération 399, nodeeco: 278
-Itération 398, nodeeco: 268
-Itération 397, nodeeco: 270
-Itération 396, nodeeco: 263
-Itération 395, nodeeco: 273
-Itération 394, nodeeco: 290
-Itération 393, nodeeco: 271
-Itération 392, nodeeco: 267
-Itération 391, nodeeco: 261
-Itération 390, nodeeco: 265
-Itération 389, nodeeco: 262
-Itération 388, nodeeco: 247
-Itération 387, nodeeco: 244
-Itération 386, nodeeco: 251
-Itération 385, nodeeco: 267
-Itération 384, nodeeco: 243
-Itération 383, nodeeco: 269
-Itération 382, nodeeco: 250
-Itération 381, nodeeco: 262
-Itération 380, nodeeco: 263
-Itération 379, nodeeco: 239
-Itération 378, nodeeco: 272
-Itération 377, nodeeco: 257
-Itération 376, nodeeco: 255
-Itération 375, nodeeco: 257
-Itération 374, nodeeco: 257
-Itération 373, nodeeco: 248
-Itération 372, nodeeco: 244
-Itération 371, nodeeco: 257
-Itération 370, nodeeco: 238
-Itération 369, nodeeco: 240
-Itération 368, nodeeco: 266
-Itération 367, nodeeco: 257
-Itération 366, nodeeco: 233
-Itération 365, nodeeco: 243
-Itération 364, nodeeco: 243
-Itération 363, nodeeco: 257
-Itération 362, nodeeco: 232
-Itération 361, nodeeco: 248
-Itération 360, nodeeco: 264
-Itération 359, nodeeco: 245
-Itération 358, nodeeco: 237
-Itération 357, nodeeco: 216
-Itération 356, nodeeco: 237
-Itération 355, nodeeco: 236
-Itération 354, nodeeco: 226
-Itération 353, nodeeco: 236
-Itération 352, nodeeco: 231
-Itération 351, nodeeco: 236
-Itération 350, nodeeco: 222
-Itération 349, nodeeco: 231
-Itération 348, nodeeco: 228
-Itération 347, nodeeco: 245
-Itération 346, nodeeco: 228
-Itération 345, nodeeco: 233
-Itération 344, nodeeco: 239
-Itération 343, nodeeco: 221
-Itération 342, nodeeco: 228
-Itération 341, nodeeco: 228
-Itération 340, nodeeco: 223
-Itération 339, nodeeco: 231
-Itération 338, nodeeco: 229
-Itération 337, nodeeco: 219
-Itération 336, nodeeco: 236
-Itération 335, nodeeco: 228
-Itération 334, nodeeco: 216
-Itération 333, nodeeco: 225
-Itération 332, nodeeco: 217
-Itération 331, nodeeco: 241
-Itération 330, nodeeco: 226
-Itération 329, nodeeco: 207
-Itération 328, nodeeco: 204
-Itération 327, nodeeco: 211
-Itération 326, nodeeco: 236
-Itération 325, nodeeco: 235
-Itération 324, nodeeco: 209
-Itération 323, nodeeco: 206
-Itération 322, nodeeco: 218
-Itération 321, nodeeco: 222
-Itération 320, nodeeco: 219
-Itération 319, nodeeco: 211
-Itération 318, nodeeco: 200
-Itération 317, nodeeco: 208
-Itération 316, nodeeco: 222
-Itération 315, nodeeco: 211
-Itération 314, nodeeco: 217
-Itération 313, nodeeco: 215
-Itération 312, nodeeco: 214
-Itération 311, nodeeco: 207
-Itération 310, nodeeco: 214
-Itération 309, nodeeco: 188
-Itération 308, nodeeco: 210
-Itération 307, nodeeco: 201
-Itération 306, nodeeco: 218
-Itération 305, nodeeco: 221
-Itération 304, nodeeco: 197
-Itération 303, nodeeco: 218
-Itération 302, nodeeco: 200
-Itération 301, nodeeco: 204
-Itération 300, nodeeco: 212
-Itération 299, nodeeco: 208
-Itération 298, nodeeco: 205
-Itération 297, nodeeco: 188
-Itération 296, nodeeco: 196
-Itération 295, nodeeco: 189
-Itération 294, nodeeco: 193
-Itération 293, nodeeco: 186
-Itération 292, nodeeco: 202
-Itération 291, nodeeco: 210
-Itération 290, nodeeco: 206
-Itération 289, nodeeco: 187
-Itération 288, nodeeco: 187
-Itération 287, nodeeco: 207
-Itération 286, nodeeco: 193
-Itération 285, nodeeco: 188
-Itération 284, nodeeco: 187
-Itération 283, nodeeco: 180
-Itération 282, nodeeco: 188
-Itération 281, nodeeco: 190
-Itération 280, nodeeco: 193
-Itération 279, nodeeco: 184
-Itération 278, nodeeco: 186
-Itération 277, nodeeco: 181
-Itération 276, nodeeco: 179
-Itération 275, nodeeco: 181
-Itération 274, nodeeco: 184
-Itération 273, nodeeco: 186
-Itération 272, nodeeco: 192
-Itération 271, nodeeco: 190
-Itération 270, nodeeco: 184
-Itération 269, nodeeco: 160
-Itération 268, nodeeco: 185
-Itération 267, nodeeco: 191
-Itération 266, nodeeco: 171
-Itération 265, nodeeco: 186
-Itération 264, nodeeco: 169
-Itération 263, nodeeco: 152
-Itération 262, nodeeco: 175
-Itération 261, nodeeco: 174
-Itération 260, nodeeco: 175
-Itération 259, nodeeco: 166
-Itération 258, nodeeco: 166
-Itération 257, nodeeco: 178
-Itération 256, nodeeco: 192
-Itération 255, nodeeco: 174
-Itération 254, nodeeco: 151
-Itération 253, nodeeco: 171
-Itération 252, nodeeco: 161
-Itération 251, nodeeco: 180
-Itération 250, nodeeco: 156
-Itération 249, nodeeco: 166
-Itération 248, nodeeco: 161
-Itération 247, nodeeco: 172
-Itération 246, nodeeco: 175
-Itération 245, nodeeco: 159
-Itération 244, nodeeco: 158
-Itération 243, nodeeco: 174
-Itération 242, nodeeco: 163
-Itération 241, nodeeco: 171
-Itération 240, nodeeco: 168
-Itération 239, nodeeco: 143
-Itération 238, nodeeco: 157
-Itération 237, nodeeco: 170
-Itération 236, nodeeco: 170
-Itération 235, nodeeco: 159
-Itération 234, nodeeco: 166
-Itération 233, nodeeco: 160
-Itération 232, nodeeco: 171
-Itération 231, nodeeco: 173
-Itération 230, nodeeco: 138
-Itération 229, nodeeco: 159
-Itération 228, nodeeco: 156
-Itération 227, nodeeco: 134
-Itération 226, nodeeco: 156
-Itération 225, nodeeco: 134
-Itération 224, nodeeco: 144
-Itération 223, nodeeco: 144
-Itération 222, nodeeco: 140
-Itération 221, nodeeco: 155
-Itération 220, nodeeco: 133
-Itération 219, nodeeco: 148
-Itération 218, nodeeco: 146
-Itération 217, nodeeco: 150
-Itération 216, nodeeco: 153
-Itération 215, nodeeco: 148
-Itération 214, nodeeco: 151
-Itération 213, nodeeco: 150
-Itération 212, nodeeco: 143
-Itération 211, nodeeco: 148
-Itération 210, nodeeco: 131
-Itération 209, nodeeco: 141
-Itération 208, nodeeco: 133
-Itération 207, nodeeco: 149
-Itération 206, nodeeco: 157
-Itération 205, nodeeco: 139
-Itération 204, nodeeco: 138
-Itération 203, nodeeco: 128
-Itération 202, nodeeco: 121
-Itération 201, nodeeco: 152
-Itération 200, nodeeco: 134
-Itération 199, nodeeco: 126
-Itération 198, nodeeco: 144
-Itération 197, nodeeco: 131
-Itération 196, nodeeco: 125
-Itération 195, nodeeco: 128
-Itération 194, nodeeco: 121
-Itération 193, nodeeco: 131
-Itération 192, nodeeco: 123
-Itération 191, nodeeco: 126
-Itération 190, nodeeco: 137
-Itération 189, nodeeco: 129
-Itération 188, nodeeco: 127
-Itération 187, nodeeco: 121
-Itération 186, nodeeco: 122
-Itération 185, nodeeco: 115
-Itération 184, nodeeco: 119
-Itération 183, nodeeco: 119
-Itération 182, nodeeco: 114
-Itération 181, nodeeco: 96
-Itération 180, nodeeco: 127
-Itération 179, nodeeco: 117
-Itération 178, nodeeco: 130
-Itération 177, nodeeco: 121
-Itération 176, nodeeco: 117
-Itération 175, nodeeco: 102
-Itération 174, nodeeco: 118
-Itération 173, nodeeco: 117
-Itération 172, nodeeco: 102
-Itération 171, nodeeco: 108
-Itération 170, nodeeco: 101
-Itération 169, nodeeco: 117
-Itération 168, nodeeco: 112
-Itération 167, nodeeco: 109
-Itération 166, nodeeco: 117
-Itération 165, nodeeco: 102
-Itération 164, nodeeco: 108
-Itération 163, nodeeco: 105
-Itération 162, nodeeco: 105
-Itération 161, nodeeco: 104
-Itération 160, nodeeco: 100
-Itération 159, nodeeco: 95
-Itération 158, nodeeco: 106
-Itération 157, nodeeco: 108
-Itération 156, nodeeco: 102
-Itération 155, nodeeco: 113
-Itération 154, nodeeco: 109
-Itération 153, nodeeco: 93
-Itération 152, nodeeco: 104
-Itération 151, nodeeco: 100
-Itération 150, nodeeco: 94
-Itération 149, nodeeco: 99
-Itération 148, nodeeco: 104
-Itération 147, nodeeco: 93
-Itération 146, nodeeco: 82
-Itération 145, nodeeco: 109
-Itération 144, nodeeco: 85
-Itération 143, nodeeco: 90
-Itération 142, nodeeco: 98
-Itération 141, nodeeco: 97
-Itération 140, nodeeco: 92
-Itération 139, nodeeco: 97
-Itération 138, nodeeco: 90
-Itération 137, nodeeco: 87
-Itération 136, nodeeco: 89
-Itération 135, nodeeco: 94
-Itération 134, nodeeco: 91
-Itération 133, nodeeco: 91
-Itération 132, nodeeco: 92
-Itération 131, nodeeco: 98
-Itération 130, nodeeco: 95
-Itération 129, nodeeco: 90
-Itération 128, nodeeco: 88
-Itération 127, nodeeco: 88
-Itération 126, nodeeco: 95
-Itération 125, nodeeco: 87
-Itération 124, nodeeco: 77
-Itération 123, nodeeco: 73
-Itération 122, nodeeco: 83
-Itération 121, nodeeco: 82
-Itération 120, nodeeco: 87
-Itération 119, nodeeco: 89
-Itération 118, nodeeco: 78
-Itération 117, nodeeco: 68
-Itération 116, nodeeco: 81
-Itération 115, nodeeco: 74
-Itération 114, nodeeco: 72
-Itération 113, nodeeco: 80
-Itération 112, nodeeco: 71
-Itération 111, nodeeco: 70
-Itération 110, nodeeco: 86
-Itération 109, nodeeco: 77
-Itération 108, nodeeco: 66
-Itération 107, nodeeco: 69
-Itération 106, nodeeco: 66
-Itération 105, nodeeco: 72
-Itération 104, nodeeco: 82
-Itération 103, nodeeco: 64
-Itération 102, nodeeco: 69
-Itération 101, nodeeco: 65
-Itération 100, nodeeco: 62
-Itération 99, nodeeco: 60
-Itération 98, nodeeco: 63
-Itération 97, nodeeco: 62
-Itération 96, nodeeco: 61
-Itération 95, nodeeco: 64
-Itération 94, nodeeco: 60
-Itération 93, nodeeco: 68
-Itération 92, nodeeco: 72
-Itération 91, nodeeco: 58
-Itération 90, nodeeco: 69
-Itération 89, nodeeco: 61
-Itération 88, nodeeco: 57
-Itération 87, nodeeco: 57
-Itération 86, nodeeco: 57
-Itération 85, nodeeco: 54
-Itération 84, nodeeco: 50
-Itération 83, nodeeco: 65
-Itération 82, nodeeco: 61
-Itération 81, nodeeco: 45
-Itération 80, nodeeco: 61
-Itération 79, nodeeco: 48
-Itération 78, nodeeco: 45
-Itération 77, nodeeco: 43
-Itération 76, nodeeco: 54
-Itération 75, nodeeco: 44
-Itération 74, nodeeco: 49
-Itération 73, nodeeco: 48
-Itération 72, nodeeco: 47
-Itération 71, nodeeco: 47
-Itération 70, nodeeco: 48
-Itération 69, nodeeco: 43
-Itération 68, nodeeco: 36
-Itération 67, nodeeco: 41
-Itération 66, nodeeco: 50
-Itération 65, nodeeco: 48
-Itération 64, nodeeco: 43
-Itération 63, nodeeco: 35
-Itération 62, nodeeco: 33
-Itération 61, nodeeco: 44
-Itération 60, nodeeco: 37
-Itération 59, nodeeco: 42
-Itération 58, nodeeco: 46
-Itération 57, nodeeco: 36
-Itération 56, nodeeco: 36
-Itération 55, nodeeco: 44
-Itération 54, nodeeco: 30
-Itération 53, nodeeco: 30
-Itération 52, nodeeco: 30
-Itération 51, nodeeco: 35
-Itération 50, nodeeco: 34
-Itération 49, nodeeco: 30
-Itération 48, nodeeco: 37
-Itération 47, nodeeco: 31
-Itération 46, nodeeco: 30
-Itération 45, nodeeco: 31
-Itération 44, nodeeco: 31
-Itération 43, nodeeco: 28
-Itération 42, nodeeco: 21
-Itération 41, nodeeco: 26
-Itération 40, nodeeco: 31
-Itération 39, nodeeco: 25
-Itération 38, nodeeco: 24
-Itération 37, nodeeco: 24
-Itération 36, nodeeco: 26
-Itération 35, nodeeco: 26
-Itération 34, nodeeco: 21
-Itération 33, nodeeco: 25
-Itération 32, nodeeco: 24
-Itération 31, nodeeco: 20
-Itération 30, nodeeco: 19
-Itération 29, nodeeco: 20
-Itération 28, nodeeco: 18
-Itération 27, nodeeco: 20
-Itération 26, nodeeco: 17
-Itération 25, nodeeco: 18
-Itération 24, nodeeco: 14
-Itération 23, nodeeco: 17
-Itération 22, nodeeco: 14
-Itération 21, nodeeco: 12
-Itération 20, nodeeco: 12
-Itération 19, nodeeco: 7
-Itération 18, nodeeco: 14
-Itération 17, nodeeco: 7
-Itération 16, nodeeco: 12
-Itération 15, nodeeco: 6
-Itération 14, nodeeco: 7
-Itération 13, nodeeco: 6
-Itération 12, nodeeco: 8
-Itération 11, nodeeco: 7
-Itération 10, nodeeco: 7
-Itération 9, nodeeco: 7
-Itération 8, nodeeco: 3
-Itération 7, nodeeco: 4
-Itération 6, nodeeco: 3
-Itération 5, nodeeco: 2
-Itération 4, nodeeco: 1
-Itération 3, nodeeco: 1
-Itération 2, nodeeco: 1
-Itération 1, nodeeco: 0
+900 623
+899 612
+898 590
+897 621
+896 635
+895 588
+894 615
+893 598
+892 610
+891 599
+890 595
+889 574
+888 623
+887 601
+886 601
+885 619
+884 610
+883 578
+882 617
+881 603
+880 587
+879 582
+878 583
+877 591
+876 598
+875 550
+874 578
+873 597
+872 604
+871 580
+870 602
+869 596
+868 615
+867 611
+866 576
+865 569
+864 611
+863 572
+862 554
+861 597
+860 569
+859 588
+858 573
+857 580
+856 587
+855 569
+854 588
+853 581
+852 562
+851 582
+850 589
+849 553
+848 568
+847 567
+846 551
+845 588
+844 544
+843 582
+842 578
+841 587
+840 559
+839 578
+838 569
+837 580
+836 573
+835 606
+834 563
+833 592
+832 575
+831 577
+830 562
+829 538
+828 563
+827 536
+826 546
+825 546
+824 554
+823 526
+822 537
+821 574
+820 542
+819 529
+818 521
+817 542
+816 548
+815 554
+814 562
+813 563
+812 556
+811 546
+810 521
+809 537
+808 560
+807 561
+806 534
+805 547
+804 545
+803 539
+802 541
+801 556
+800 554
+799 568
+798 494
+797 532
+796 537
+795 535
+794 544
+793 528
+792 529
+791 542
+790 538
+789 526
+788 532
+787 516
+786 524
+785 512
+784 520
+783 529
+782 526
+781 549
+780 494
+779 517
+778 511
+777 529
+776 513
+775 518
+774 525
+773 502
+772 525
+771 513
+770 531
+769 524
+768 544
+767 521
+766 531
+765 513
+764 531
+763 517
+762 523
+761 504
+760 512
+759 521
+758 495
+757 498
+756 530
+755 522
+754 534
+753 500
+752 497
+751 515
+750 509
+749 514
+748 514
+747 476
+746 504
+745 517
+744 482
+743 524
+742 487
+741 474
+740 510
+739 526
+738 490
+737 486
+736 491
+735 500
+734 454
+733 523
+732 513
+731 497
+730 501
+729 499
+728 505
+727 472
+726 470
+725 475
+724 491
+723 502
+722 505
+721 492
+720 459
+719 479
+718 492
+717 474
+716 482
+715 511
+714 482
+713 444
+712 476
+711 450
+710 470
+709 464
+708 485
+707 496
+706 486
+705 500
+704 484
+703 472
+702 483
+701 451
+700 465
+699 456
+698 478
+697 481
+696 462
+695 496
+694 471
+693 475
+692 462
+691 469
+690 471
+689 459
+688 444
+687 472
+686 466
+685 479
+684 473
+683 449
+682 465
+681 444
+680 459
+679 475
+678 459
+677 453
+676 451
+675 461
+674 440
+673 429
+672 445
+671 486
+670 463
+669 449
+668 457
+667 468
+666 466
+665 486
+664 435
+663 467
+662 437
+661 446
+660 444
+659 423
+658 410
+657 431
+656 435
+655 438
+654 443
+653 435
+652 418
+651 447
+650 443
+649 436
+648 421
+647 449
+646 419
+645 447
+644 451
+643 441
+642 448
+641 441
+640 443
+639 426
+638 420
+637 437
+636 432
+635 419
+634 439
+633 399
+632 445
+631 425
+630 401
+629 430
+628 422
+627 399
+626 425
+625 431
+624 404
+623 426
+622 429
+621 415
+620 445
+619 434
+618 423
+617 397
+616 400
+615 414
+614 417
+613 412
+612 404
+611 438
+610 432
+609 389
+608 424
+607 391
+606 387
+605 428
+604 425
+603 385
+602 408
+601 416
+600 415
+599 403
+598 416
+597 399
+596 390
+595 426
+594 425
+593 405
+592 382
+591 417
+590 425
+589 398
+588 417
+587 401
+586 417
+585 378
+584 400
+583 386
+582 382
+581 393
+580 373
+579 384
+578 388
+577 383
+576 383
+575 404
+574 395
+573 397
+572 400
+571 382
+570 407
+569 401
+568 382
+567 375
+566 392
+565 412
+564 382
+563 377
+562 361
+561 391
+560 373
+559 374
+558 382
+557 361
+556 392
+555 376
+554 367
+553 369
+552 397
+551 360
+550 368
+549 395
+548 377
+547 355
+546 384
+545 369
+544 363
+543 375
+542 363
+541 358
+540 351
+539 364
+538 368
+537 365
+536 356
+535 356
+534 343
+533 373
+532 357
+531 360
+530 368
+529 355
+528 349
+527 345
+526 353
+525 364
+524 352
+523 325
+522 349
+521 342
+520 355
+519 363
+518 349
+517 346
+516 356
+515 369
+514 344
+513 348
+512 343
+511 359
+510 353
+509 352
+508 351
+507 338
+506 336
+505 324
+504 336
+503 343
+502 324
+501 342
+500 333
+499 343
+498 315
+497 322
+496 327
+495 354
+494 330
+493 332
+492 347
+491 317
+490 318
+489 343
+488 334
+487 312
+486 334
+485 316
+484 343
+483 336
+482 323
+481 322
+480 312
+479 320
+478 330
+477 292
+476 321
+475 303
+474 330
+473 320
+472 318
+471 318
+470 313
+469 319
+468 327
+467 322
+466 302
+465 323
+464 304
+463 295
+462 305
+461 303
+460 323
+459 298
+458 271
+457 328
+456 296
+455 311
+454 294
+453 283
+452 277
+451 304
+450 315
+449 314
+448 300
+447 306
+446 304
+445 326
+444 296
+443 307
+442 307
+441 292
+440 304
+439 328
+438 296
+437 299
+436 296
+435 282
+434 261
+433 278
+432 298
+431 288
+430 303
+429 302
+428 316
+427 298
+426 296
+425 287
+424 297
+423 282
+422 278
+421 294
+420 269
+419 256
+418 265
+417 267
+416 286
+415 262
+414 276
+413 255
+412 284
+411 293
+410 281
+409 250
+408 289
+407 274
+406 258
+405 261
+404 271
+403 272
+402 281
+401 264
+400 255
+399 278
+398 268
+397 270
+396 263
+395 273
+394 290
+393 271
+392 267
+391 261
+390 265
+389 262
+388 247
+387 244
+386 251
+385 267
+384 243
+383 269
+382 250
+381 262
+380 263
+379 239
+378 272
+377 257
+376 255
+375 257
+374 257
+373 248
+372 244
+371 257
+370 238
+369 240
+368 266
+367 257
+366 233
+365 243
+364 243
+363 257
+362 232
+361 248
+360 264
+359 245
+358 237
+357 216
+356 237
+355 236
+354 226
+353 236
+352 231
+351 236
+350 222
+349 231
+348 228
+347 245
+346 228
+345 233
+344 239
+343 221
+342 228
+341 228
+340 223
+339 231
+338 229
+337 219
+336 236
+335 228
+334 216
+333 225
+332 217
+331 241
+330 226
+329 207
+328 204
+327 211
+326 236
+325 235
+324 209
+323 206
+322 218
+321 222
+320 219
+319 211
+318 200
+317 208
+316 222
+315 211
+314 217
+313 215
+312 214
+311 207
+310 214
+309 188
+308 210
+307 201
+306 218
+305 221
+304 197
+303 218
+302 200
+301 204
+300 212
+299 208
+298 205
+297 188
+296 196
+295 189
+294 193
+293 186
+292 202
+291 210
+290 206
+289 187
+288 187
+287 207
+286 193
+285 188
+284 187
+283 180
+282 188
+281 190
+280 193
+279 184
+278 186
+277 181
+276 179
+275 181
+274 184
+273 186
+272 192
+271 190
+270 184
+269 160
+268 185
+267 191
+266 171
+265 186
+264 169
+263 152
+262 175
+261 174
+260 175
+259 166
+258 166
+257 178
+256 192
+255 174
+254 151
+253 171
+252 161
+251 180
+250 156
+249 166
+248 161
+247 172
+246 175
+245 159
+244 158
+243 174
+242 163
+241 171
+240 168
+239 143
+238 157
+237 170
+236 170
+235 159
+234 166
+233 160
+232 171
+231 173
+230 138
+229 159
+228 156
+227 134
+226 156
+225 134
+224 144
+223 144
+222 140
+221 155
+220 133
+219 148
+218 146
+217 150
+216 153
+215 148
+214 151
+213 150
+212 143
+211 148
+210 131
+209 141
+208 133
+207 149
+206 157
+205 139
+204 138
+203 128
+202 121
+201 152
+200 134
+199 126
+198 144
+197 131
+196 125
+195 128
+194 121
+193 131
+192 123
+191 126
+190 137
+189 129
+188 127
+187 121
+186 122
+185 115
+184 119
+183 119
+182 114
+181 96
+180 127
+179 117
+178 130
+177 121
+176 117
+175 102
+174 118
+173 117
+172 102
+171 108
+170 101
+169 117
+168 112
+167 109
+166 117
+165 102
+164 108
+163 105
+162 105
+161 104
+160 100
+159 95
+158 106
+157 108
+156 102
+155 113
+154 109
+153 93
+152 104
+151 100
+150 94
+149 99
+148 104
+147 93
+146 82
+145 109
+144 85
+143 90
+142 98
+141 97
+140 92
+139 97
+138 90
+137 87
+136 89
+135 94
+134 91
+133 91
+132 92
+131 98
+130 95
+129 90
+128 88
+127 88
+126 95
+125 87
+124 77
+123 73
+122 83
+121 82
+120 87
+119 89
+118 78
+117 68
+116 81
+115 74
+114 72
+113 80
+112 71
+111 70
+110 86
+109 77
+108 66
+107 69
+106 66
+105 72
+104 82
+103 64
+102 69
+101 65
+100 62
+99 60
+98 63
+97 62
+96 61
+95 64
+94 60
+93 68
+92 72
+91 58
+90 69
+89 61
+88 57
+87 57
+86 57
+85 54
+84 50
+83 65
+82 61
+81 45
+80 61
+79 48
+78 45
+77 43
+76 54
+75 44
+74 49
+73 48
+72 47
+71 47
+70 48
+69 43
+68 36
+67 41
+66 50
+65 48
+64 43
+63 35
+62 33
+61 44
+60 37
+59 42
+58 46
+57 36
+56 36
+55 44
+54 30
+53 30
+52 30
+51 35
+50 34
+49 30
+48 37
+47 31
+46 30
+45 31
+44 31
+43 28
+42 21
+41 26
+40 31
+39 25
+38 24
+37 24
+36 26
+35 26
+34 21
+33 25
+32 24
+31 20
+30 19
+29 20
+28 18
+27 20
+26 17
+25 18
+24 14
+23 17
+22 14
+21 12
+20 12
+19 7
+18 14
+17 7
+16 12
+15 6
+14 7
+13 6
+12 8
+11 7
+10 7
+9 7
+8 3
+7 4
+6 3
+5 2
+4 1
+3 1
+2 1
+1 0
