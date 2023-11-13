@@ -87,14 +87,20 @@ let gen_alea n =
   let entier_final = if n mod 64 = 0 then
       gen_entier_aleatoire ()
     else
-      Int64.logand dernier_entier (gen_entier_aleatoire ())
+      Int64.logand dernier_entier (gen_entier_aleatoire ()) (*Operation and entre un entier toujours positif et un entier aléatoire positif ou négatif *)
   in
   aleatoire_partie @ [entier_final]
 
     
 (*partie 2*)
 
-(* Fonction auxiliaire pour calculer le logarithme en base 2 *)   
+(*fonction qui verifie si un entier est une puissance de 2*)
+let rec estPowde2 n =
+  if n = 1 then true
+  else if (n mod 2) <> 1 then false
+  else estPowde2 (n/2)
+
+(* Fonction auxiliaire pour couper une liste en deux*)   
 let split l = 
   let rec split_at_point lst n =
     if n = 0 then
@@ -113,9 +119,9 @@ type arbre_decision =
   | Leaf of bool  (* Feuille de l'arbre contenant un booleen*)
   | Node of int * arbre_decision * arbre_decision  (* Nœud interne de l'arbre *)
 
-  let cons_arbre t =
+  let rec cons_arbre t =
     let length_t = List.length t in
-    let n = if length_t mod 2 <> 0 then completion t (length_t + 1) else t in
+    if not (estPowde2 length_t) then cons_arbre (completion t (length_t + 1)) else let n = t in
     
     (* Fonction auxiliaire pour construire l'arbre de décision *)
     let rec aux depth lst = 
